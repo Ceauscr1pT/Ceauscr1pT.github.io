@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Promise | Aixin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PromisePromise是什么抽象：Promise是JS中进行异步编程的新的解决方案 具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果 需要Promise的原因Promise是为了解决回调地狱、回调更加灵活，更易于代码阅读 回调地狱：在回调函数中嵌套回调  解决方案：Promise链式调用 终极解决方案：async &#x2F; await  例：通过ajax请求">
+  <meta name="description" content="Promise是什么抽象：Promise是JS中进行异步编程的新的解决方案 具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Promise">
 <meta property="og:url" content="http://example.com/2021/12/06/Promise/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
-<meta property="og:description" content="PromisePromise是什么抽象：Promise是JS中进行异步编程的新的解决方案 具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果 需要Promise的原因Promise是为了解决回调地狱、回调更加灵活，更易于代码阅读 回调地狱：在回调函数中嵌套回调  解决方案：Promise链式调用 终极解决方案：async &#x2F; await  例：通过ajax请求">
+<meta property="og:description" content="Promise是什么抽象：Promise是JS中进行异步编程的新的解决方案 具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211206200603820.png">
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211206201054193.png">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211210133139287.png">
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211210134231956.png">
 <meta property="article:published_time" content="2021-12-06T11:23:57.000Z">
-<meta property="article:modified_time" content="2021-12-10T09:00:01.335Z">
+<meta property="article:modified_time" content="2021-12-14T07:23:45.077Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211206200603820.png">
@@ -277,8 +277,12 @@
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><h2 id="Promise是什么"><a href="#Promise是什么" class="headerlink" title="Promise是什么"></a>Promise是什么</h2><p>抽象：Promise是JS中进行异步编程的新的解决方案</p>
+       <h2 id="Promise是什么"><a href="#Promise是什么" class="headerlink" title="Promise是什么"></a>Promise是什么</h2><p>抽象：Promise是JS中进行异步编程的新的解决方案</p>
 <p>具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果</p>
+<span id="more"></span>
+
+
+
 <h2 id="需要Promise的原因"><a href="#需要Promise的原因" class="headerlink" title="需要Promise的原因"></a>需要Promise的原因</h2><p>Promise是为了解决<strong>回调地狱</strong>、回调更加灵活，更易于代码阅读</p>
 <p>回调地狱：在回调函数中嵌套回调</p>
 <ul>
