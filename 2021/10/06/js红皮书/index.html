@@ -6,56 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>HTML+css3 | Aixin&#39;s Blog</title>
+  <title>js红皮书 | Aixin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTML和CSS​       html本身是有一些默认样式,如果我们想改变html标签的样式,就需要借助css ​       html+css构成了我们网页的基本页面结构和样式">
+  <meta name="description" content="第4章  变量、作用域与内存变量JavaScript变量是松散类型 原始值与引用值ECMAscript包含两种类型数据： 原始值（Undefined、Null、Boolean、Number、String 和 Symbol）   原始值按值访问，存储在栈内存 引用值：保存在内存中的对象   引用值按引用访问，存储指针，指针所指对象在堆内存 动态属性原始值不能随意有属性和方法(可以存在特定方法，详">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML+css3">
-<meta property="og:url" content="http://example.com/2021/06/29/HTML-css3/index.html">
+<meta property="og:title" content="js红皮书">
+<meta property="og:url" content="http://example.com/2021/10/06/js%E7%BA%A2%E7%9A%AE%E4%B9%A6/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
-<meta property="og:description" content="HTML和CSS​       html本身是有一些默认样式,如果我们想改变html标签的样式,就需要借助css ​       html+css构成了我们网页的基本页面结构和样式">
+<meta property="og:description" content="第4章  变量、作用域与内存变量JavaScript变量是松散类型 原始值与引用值ECMAscript包含两种类型数据： 原始值（Undefined、Null、Boolean、Number、String 和 Symbol）   原始值按值访问，存储在栈内存 引用值：保存在内存中的对象   引用值按引用访问，存储指针，指针所指对象在堆内存 动态属性原始值不能随意有属性和方法(可以存在特定方法，详">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://img.mukewang.com/52d38c41000163e210120455.jpg">
-<meta property="og:image" content="https://img2.mukewang.com/5e946dbb00017e5a18650836.jpg">
-<meta property="og:image" content="http://img.mukewang.com/53ba39390001703403330194.jpg">
-<meta property="og:image" content="http://img.mukewang.com/5293245e0001be3705750340.jpg">
-<meta property="og:image" content="http://img.mukewang.com/529325ad0001f9a104940133.jpg">
-<meta property="og:image" content="http://img.mukewang.com/529325cf0001eb0c04590266.jpg">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210511195035602.png">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210511195100654.png">
-<meta property="og:image" content="http://img.mukewang.com/52d383cd0001085503320216.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52d3884a00014b0702270264.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52d3893400019ee003830208.jpg">
-<meta property="og:image" content="d:/typora/Typora/图片地址">
-<meta property="og:image" content="https://img1.mukewang.com/5e9180a300019f0611480732.jpg">
-<meta property="og:image" content="https://img.mukewang.com/5e9180d50001d1ec18461296.jpg">
-<meta property="og:image" content="https://img4.mukewang.com/5e9180e20001402015880712.jpg">
-<meta property="og:image" content="https://img.mukewang.com/5e91834a000161cc06140254.jpg">
-<meta property="og:image" content="https://img.mukewang.com/5e918efa0001a01204260146.jpg">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210513014018787.png">
-<meta property="og:image" content="https://img1.mukewang.com/5e9196a5000183f107300076.jpg">
-<meta property="og:image" content="https://img3.mukewang.com/5e9198fb0001934606750121.jpg">
-<meta property="og:image" content="https://img.mukewang.com/5e919cb50001312908010115.jpg">
-<meta property="og:image" content="https://img.mukewang.com/5e91a7da0001ef2207400142.jpg">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210513132044684.png">
-<meta property="og:image" content="http://img.mukewang.com/52e5f7c60001a23f07360267.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e5f8010001159804900257.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e613350001461604820109.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e6126f0001496a04480218.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e618680001a6b204570101.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e6189e000186b604480218.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e618bc00015a1004480218.jpg">
-<meta property="og:image" content="http://img.mukewang.com/52e5b4040001f4af05760367.jpg">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210513175258787.png">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210513175401702.png">
-<meta property="og:image" content="https://img2.mukewang.com/5e91a9c80001810a11210735.jpg">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20210513180653521.png">
-<meta property="og:image" content="http://img.mukewang.com/52e6037300015a9905030165.jpg">
-<meta property="article:published_time" content="2021-06-29T08:22:46.000Z">
-<meta property="article:modified_time" content="2021-11-23T10:45:58.404Z">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211117155422821.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211117155504651.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211117162557776.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211117171751064.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211117173555726.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211118112906477.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211118112936037.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211118114322833.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211118114700769.png">
+<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211118145130952.png">
+<meta property="article:published_time" content="2021-10-06T09:51:18.000Z">
+<meta property="article:modified_time" content="2021-12-14T07:54:30.746Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://img.mukewang.com/52d38c41000163e210120455.jpg">
+<meta name="twitter:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211117155422821.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -66,7 +40,7 @@
   <style type="text/css">
   
     #container.show {
-      background: skyblue;
+      background: linear-gradient(200deg, #99ccff, #dfdfdf);
     }
   </style>
   
@@ -82,7 +56,7 @@
       
 <div
   class="overlay"
-  style="background: #4d4d4d"
+  style="background: #cce5ff"
 ></div>
 <div class="intrude-less">
   <header id="header" class="inner">
@@ -100,8 +74,6 @@
       <ul>
         
         <li><a href="/">主页</a></li>
-        
-        <li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
         
       </ul>
     </nav>
@@ -230,7 +202,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #cce5ff"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -244,8 +216,6 @@
 			</hgroup>
 			
 			
-			
-				
 			
 				
 			
@@ -267,9 +237,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -285,7 +253,7 @@
           </div>
           <div id="js-content" class="content-ll">
             <article
-  id="post-HTML-css3"
+  id="post-js红皮书"
   class="
     article article-type-post
     
@@ -299,232 +267,379 @@
       
   
     <h1 class="article-title" itemprop="name">
-      HTML+css3
+      js红皮书
     </h1>
   
-  <a href="/2021/06/29/HTML-css3/" class="archive-article-date">
-  	<time datetime="2021-06-29T08:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-29</time>
+  <a href="/2021/10/06/js%E7%BA%A2%E7%9A%AE%E4%B9%A6/" class="archive-article-date">
+  	<time datetime="2021-10-06T09:51:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-06</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <meta name="referrer" content="no-referrer"/>
+       <span id="more"></span>
 
-<h1 id="HTML和CSS"><a href="#HTML和CSS" class="headerlink" title="HTML和CSS"></a>HTML和CSS</h1><p>​       html本身是有一些默认样式,如果我们想改变html标签的样式,就需要借助css</p>
-<p>​       html+css构成了我们网页的基本页面结构和样式</p>
-<span id="more"></span>
+<h1 id="第4章-变量、作用域与内存"><a href="#第4章-变量、作用域与内存" class="headerlink" title="第4章  变量、作用域与内存"></a>第4章  变量、作用域与内存</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>JavaScript变量是<strong>松散类型</strong></p>
+<h3 id="原始值与引用值"><a href="#原始值与引用值" class="headerlink" title="原始值与引用值"></a>原始值与引用值</h3><p>ECMAscript包含两种类型数据：</p>
+<p>原始值（Undefined、Null、Boolean、Number、String 和 Symbol）</p>
+<p>  原始值按<strong>值</strong>访问，存储在<strong>栈内存</strong></p>
+<p>引用值：保存在内存中的对象</p>
+<p>  引用值按<strong>引用</strong>访问，存储<strong>指针</strong>，指针所指对象在<strong>堆内存</strong></p>
+<h4 id="动态属性"><a href="#动态属性" class="headerlink" title="动态属性"></a>动态属性</h4><p>原始值不能<strong>随意</strong>有属性和方法(可以存在<strong>特定方法</strong>，详见原始值包装类型），引用值可<strong>随时</strong>添加、修改和删除其属性和方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>(); <span class="comment">//原始类型初始化使用字面量</span></span><br><span class="line">person.name = <span class="string">&quot;Nicholas&quot;</span>; </span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// &quot;Nicholas&quot; </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;Nicholas&quot;</span>; <span class="comment">//引用类型使用new关键字创建对象</span></span><br><span class="line">name.age = <span class="number">27</span>; </span><br><span class="line"><span class="built_in">console</span>.log(name.age); <span class="comment">// undefined </span></span><br></pre></td></tr></table></figure>
 
-<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>​        HTML标签不区分大小写，<code>&lt;h1&gt;</code>和<code>&lt;H1&gt;</code>是一样的，但建议小写，因为大部分程序员都以小写为准</p>
-<h3 id="标签的语义化"><a href="#标签的语义化" class="headerlink" title="标签的语义化"></a>标签的语义化</h3><p>语义化：</p>
-<p>明白每个标签的用途（在什么情况下使用此标签合理）比如，网页上的文章的<strong>标题</strong>就可以用标题标签，网页上的各个栏目的<strong>栏目名称</strong>也可以使用标题标签。文章中内容的段落就得放在<strong>段落标签</strong>中等等</p>
-<p>语义化的好处：</p>
-<ol>
-<li>更容易被搜索引擎收录。</li>
-<li>更容易让屏幕阅读器读出网页内容。</li>
-</ol>
-<h3 id="标签元素分类"><a href="#标签元素分类" class="headerlink" title="标签元素分类"></a>标签元素分类</h3><p>​       块状元素、内联元素(又叫行内元素)和内联块状元素。</p>
-<p><strong>常用的块状元素有：</strong></p>
-<p><code>&lt;div&gt;、&lt;p&gt;、&lt;h1&gt;...&lt;h6&gt;、&lt;ol&gt;、&lt;ul&gt;、&lt;li&gt;、&lt;dl&gt;、&lt;table&gt;、&lt;address&gt;、&lt;blockquote&gt;、&lt;form&gt;</code></p>
-<p><strong>常用的内联元素有：</strong></p>
-<p><code>&lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;</code></p>
-<p><strong>常用的内联块状元素有：</strong></p>
-<p><code>&lt;img&gt;、&lt;input&gt;</code></p>
-<h3 id="lt-head-gt-标签"><a href="#lt-head-gt-标签" class="headerlink" title="&lt;head&gt;标签"></a>&lt;<code>head</code>&gt;标签</h3><p>​       head<code>标签表示头部标签,通常用来嵌套</code>meta<code>、</code>title<code>、</code>style等标签</p>
+
+
+<h4 id="复制值"><a href="#复制值" class="headerlink" title="复制值"></a>复制值</h4><p>原始值和引用值的<strong>复制值</strong></p>
+<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211117155422821.png" alt="image-20211117155422821"></p>
+<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211117155504651.png" alt="image-20211117155504651"></p>
+<h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><p>ECMAScript 中所有函数的参数都是按值传递的。如果是原始值，那么就跟原始值变量的复制一样，如果是引用值，那么就跟引用值变量的复制一样。下面是引用值的情况：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>) </span>&#123; </span><br><span class="line"> obj.name = <span class="string">&quot;Nicholas&quot;</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>(); </span><br><span class="line">setName(person); </span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// &quot;Nicholas&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>即使对象 是按值传进函数的，obj 也会通过引用访问对象。当函数内部给 obj 设置了 name 属性时，函数外部的 对象也会反映这个变化，因为 obj 指向的对象保存在全局作用域的堆内存上。很多开发者错误地认为， 当在局部作用域中修改对象而变化反映到全局时，就意味着参数是按引用传递的。为证明对象是按值传 递的，我们再来看看下面这个修改后的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>) </span>&#123; </span><br><span class="line"> obj.name = <span class="string">&quot;Nicholas&quot;</span>; </span><br><span class="line"> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(); </span><br><span class="line"> obj.name = <span class="string">&quot;Greg&quot;</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>(); </span><br><span class="line">setName(person); </span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// &quot;Nicholas&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个例子前后唯一的变化就是 setName()中多了两行代码，将 obj 重新定义为一个有着不同 name 的新对象。当 person 传入 setName()时，其 name 属性被设置为”Nicholas”。然后变量 obj 被设置 为一个新对象且 name 属性被设置为”Greg”。如果 person 是按引用传递的，那么 person 应该自动将 指针改为指向 name 为”Greg”的对象。可是，当我们再次访问 person.name 时，它的值是”Nicholas”， 这表明函数中参数的值改变之后，原始的引用仍然没变。当 obj 在函数内部被重写时，它变成了一个指 向本地对象的指针。而那个本地对象在函数执行结束时就被销毁了。</p>
+<h4 id="确定类型"><a href="#确定类型" class="headerlink" title="确定类型"></a>确定类型</h4><p><strong>typeof</strong> 操作符最适合判断一个变量是否为<strong>原始类型</strong>。但值是对象或<strong>null</strong>时返回”<strong>object</strong>“。</p>
+<p>typeof 虽然对原始值很有用，但它对引用值的用处不大。我们通常不关心一个值是不是对象， 而是想知道它是<strong>什么类型的对象</strong>。为了解决这个问题，ECMAScript 提供了 <strong>instanceof</strong> 操作符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result = variable <span class="keyword">instanceof</span> <span class="title">constructor</span> //语法</span><br><span class="line"></span><br><span class="line"><span class="title">console</span>.<span class="title">log</span>(<span class="params">person <span class="keyword">instanceof</span> <span class="built_in">Object</span></span>); <span class="comment">// 变量 person 是 Object 吗？</span></span><br><span class="line"><span class="built_in">console</span>.log(colors <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// 变量 colors 是 Array 吗？</span></span><br><span class="line"><span class="built_in">console</span>.log(pattern <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>); <span class="comment">// 变量 pattern 是 RegExp 吗？</span></span><br></pre></td></tr></table></figure>
+
+<p>所有<strong>引用值都是 Object 的实例</strong>，因此通过 instanceof 操作符检测任何引用值和 Object 构造函数都会返回 true。</p>
+<p>typeof 操作符在用于检测函数时也会返回”<strong>function</strong>“。</p>
 <ul>
-<li><p><code>&lt;title&gt;</code>标签：在<title>和</title>标签之间的文字内容是网页的标题信息，它会出现在浏览器的标题栏中。网页的title标签用于告诉用户和搜索引擎这个网页的主要内容是什么，搜索引擎可以通过网页标题，迅速的判断出网页的主题。每个网页的内容都是不同的，每个网页都应该有一个独一无二的title</p>
-</li>
-<li><meta charset="UTF-8">设置当前文件字符编码</li>
-<li><p>&lt;<code>style</code>&gt;标签：双标签中设置当前文件样式</p>
-</li>
+<li>在Safari和Chrome中，typeof 对<strong>正则表达式</strong>也返回”function”</li>
+<li>在 IE 和 Firefox 中，typeof 对<strong>正则表达式</strong> 返回”<strong>object</strong>“</li>
 </ul>
-<h3 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h3><p>​        如果想在网页上显示文章，这时就需要<p>标签了，把文章的段落放到<p>标签中。</p>
-<p>​         注意一段文字一个<code>&lt;p&gt;</code>标签，如在一篇新闻文章中有3段文字，就要把这3个段落分别放到<strong>3</strong>个<code>&lt;p&gt;</code>标签中。</p>
-<h3 id="lt-span-gt-标签"><a href="#lt-span-gt-标签" class="headerlink" title="&lt;span&gt;标签"></a>&lt;<code>span</code>&gt;标签</h3><p>​        <span>标签没有语义，作用是为了设置文本中某段单独的样式，在style标签中单独设置样式：</p>
-<p>​         &lt;p<code>&gt;</code>1922年的春天，一个想要成名名叫尼克•卡拉威（托比•马奎尔Tobey Maguire 饰）的作家，离开了美国中西部，来到了纽约。那是一个道德感渐失，爵士乐流行，走私为王，股票飞涨的时代。为了追寻他的&lt;<code>span</code>&gt;美国梦&lt;/<code>span</code>&gt;，他搬入纽约附近一海湾居住。&lt;/p<code>&gt;</code></p>
-<h3 id="lt-hx-gt-标签"><a href="#lt-hx-gt-标签" class="headerlink" title="&lt;hx&gt;标签"></a>&lt;<code>hx</code>&gt;标签</h3><p>​         <hx>标签用来制作文章的标题，x可取1-6的六个数，分别为一到六级的标题。<h1>等级最高。</p>
-<h3 id="lt-div-gt-标签"><a href="#lt-div-gt-标签" class="headerlink" title="&lt;div&gt;标签"></a>&lt;<code>div</code>&gt;标签</h3><p>​         在网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个<code>&lt;div&gt;</code>标签中，这个<div>标签的作用就相当于一个容器。逻辑部分是页面上相互关联的一组元素。如网页中的独立的<strong>栏目版块</strong>，就是一个典型的逻辑部分。如下图所示：图中用红色边框标出的部分就是一个逻辑部分，就可以使用<code>&lt;div&gt;</code>标签作为容器。</p>
-<p><img src="http://img.mukewang.com/52d38c41000163e210120455.jpg"></p>
-<h3 id="lt-header-gt-标签"><a href="#lt-header-gt-标签" class="headerlink" title="&lt;header&gt;标签"></a>&lt;<code>header</code>&gt;标签</h3><p>​        header标签来定义头部区域。</p>
-<h3 id="lt-footer-gt-标签"><a href="#lt-footer-gt-标签" class="headerlink" title="&lt;footer&gt;标签"></a>&lt;<code>footer</code>&gt;标签</h3><p>​        footer标签用来定义底部区域。</p>
-<h3 id="lt-section-gt-标签"><a href="#lt-section-gt-标签" class="headerlink" title="&lt;section&gt;标签"></a>&lt;<code>section</code>&gt;标签</h3><p>​        section标签用来定义一个区域。例如网站中的专栏部分。</p>
-<h3 id="lt-aside-gt-标签"><a href="#lt-aside-gt-标签" class="headerlink" title="&lt;aside&gt;标签"></a>&lt;<code>aside</code>&gt;标签</h3><p>​        aside标签用来定义一个侧边栏区域。</p>
-<p><img src="https://img2.mukewang.com/5e946dbb00017e5a18650836.jpg"></p>
-<h3 id="lt-br-gt-标签"><a href="#lt-br-gt-标签" class="headerlink" title="&lt;br&gt;标签"></a>&lt;<code>br</code>&gt;标签</h3><p>​        在文本中需要加回车换行的地方加入&lt;<code>br</code>/&gt;,作用相当于word文档中的<strong>回车</strong>。</p>
-<p><img src="http://img.mukewang.com/53ba39390001703403330194.jpg"></p>
-<h3 id="空格标签——特殊字符-amp-nbsp"><a href="#空格标签——特殊字符-amp-nbsp" class="headerlink" title="空格标签——特殊字符&amp;nbsp"></a>空格标签——特殊字符&amp;nbsp</h3><p>​         html中输入多个空格只显示一个空格，输入多个空格需要用到&amp;nbsp，如下图：</p>
-<p><img src="http://img.mukewang.com/5293245e0001be3705750340.jpg"></p>
-<p><img src="http://img.mukewang.com/529325ad0001f9a104940133.jpg"></p>
-<p><img src="http://img.mukewang.com/529325cf0001eb0c04590266.jpg"></p>
-<h3 id="lt-hr-gt-标签"><a href="#lt-hr-gt-标签" class="headerlink" title="&lt;hr&gt;标签"></a>&lt;<code>hr</code>&gt;标签</h3><p>​        &lt;<code>hr</code>&gt;标签用来实现水平线标签。</p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210511195035602.png" alt="image-20210511195035602"></p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210511195100654.png" alt="image-20210511195100654"></p>
-<p>语法：</p>
-<p>​        html4.01版本：<hr></p>
-<p>​        xhtml1.0版本：<hr /></p>
-<p><strong>注意：</strong></p>
+<p>全局上下文是最外层的上下文。在浏览器中，全局上下文就是我们常说的 window 对象。上下文在其所有代码都执行完毕后会被销毁，包括定义 在它上面的所有变量和函数（全局上下文在应用程序退出前才会被销毁，比如<strong>关闭网页</strong>或<strong>退出浏览器</strong>）。</p>
+<p> <strong>var</strong> 定 义的全局变量和函数都会成为 window 对象的属性和方法。</p>
+<p><strong>let</strong> 和 <strong>const</strong> 的顶级声明不会定义在全局上下文中，但在作用域链解析上效果是一样的。</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="执行上下文与作用域"><a href="#执行上下文与作用域" class="headerlink" title="执行上下文与作用域"></a>执行上下文与作用域</h3><p>上下文中的代码在执行的时候，会创建变量对象的一个<strong>作用域链</strong>（scope chain）。这个作用域链决定了各级上下文中的代码在访问变量和函数时的顺序。代码正在执行的上下文的变量对象始终位于作用域链的<strong>最前端</strong>。</p>
+<p>如果上下文是函数，则其<strong>活动对象</strong>（activation object）用作变量对象。全局上下文的变量对象始终是作用域链的<strong>最后一个变量对象</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> color = <span class="string">&quot;blue&quot;</span>; </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">changeColor</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">   <span class="keyword">let</span> anotherColor = <span class="string">&quot;red&quot;</span>; </span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">swapColors</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">     <span class="keyword">let</span> tempColor = anotherColor; </span><br><span class="line">     anotherColor = color; </span><br><span class="line">     color = tempColor; </span><br><span class="line">     <span class="comment">// 这里可以访问 color、anotherColor 和 tempColor </span></span><br><span class="line">   &#125; </span><br><span class="line">   <span class="comment">// 这里可以访问 color 和 anotherColor，但访问不到 tempColor </span></span><br><span class="line">   swapColors(); </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="comment">// 这里只能访问 color </span></span><br><span class="line">changeColor(); </span><br></pre></td></tr></table></figure>
+
+<p>该例涉及3个上下文：全局上下文、changeColor()的局部上下文和 swapColors()的局部上下文。</p>
+<p>下图反映了该例子的作用域链：</p>
+<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211117162557776.png" alt="image-20211117162557776"></p>
+<p>内部上下文可以通过作用域链访问外部上下文中的一切，但外 部上下文无法访问内部上下文中的任何东西。</p>
+<p>swapColors() 局部上下文的作用域链中有 3 个对象：swapColors()的变量对象、changeColor()的变量对象和全局变量对象。swapColors()的局部上下文首先从自己的变量对象开始搜索变量和函数，搜不到就去搜索上一级变量对象。</p>
+<h4 id="作用域链增强"><a href="#作用域链增强" class="headerlink" title="作用域链增强"></a>作用域链增强</h4><p><strong>执行上下文</strong>主要有 <strong>全局上下文</strong> 和 <strong>函数上下文</strong> 两种</p>
+<p>某些语句会导致在作用域链前端临时添加一个上下文，这个上下文在<strong>代码执行后</strong>会被删除。通常在两种情况下会出现这个现象，即代码执行到下面任意一种情况时：</p>
+<ul>
+<li> try/catch 语句的 <strong>catch 块</strong> </li>
+<li> <strong>with 语句</strong></li>
+</ul>
+<p>这两种情况下，都会在作用域链前端添加一个变量对象。对 with 语句来说，会向作用域链前端添加<strong>指定的对象</strong>；对 catch 语句而言，则会创建一个新的变量对象，这个变量对象会包含<strong>要抛出的错误对象的声明</strong>。</p>
+<h4 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h4><p>直到 ECMAScript 5.1，var 都是声明变量 的<strong>唯一关键字</strong>。ES6 不仅增加了 <strong>let</strong> 和 <strong>const</strong> 两个关键字，而且还让这两个关键字压倒性地超越 var 成为首选。</p>
+<h5 id="var的函数作用域声明"><a href="#var的函数作用域声明" class="headerlink" title="var的函数作用域声明"></a>var的函数作用域声明</h5><p>如果变量未经声明就被初始化了， 那么它就会自动被添加到全局上下文,如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>) </span>&#123; </span><br><span class="line"> sum = num1 + num2; </span><br><span class="line"> <span class="keyword">return</span> sum; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注：未经声明而初始化变量是 JavaScript 编程中一个非常常见的错误，会导致很多问题。为此，读者在初始化变量之前一定要先声明变量。在<strong>严格模式</strong>下，未经声明就初始化变量会报错。</p>
+<p>var声明的变量存在”<strong>提升</strong>“现象，会提前声明但不赋值（undefined）</p>
+<p>var可以在同一作用域内重复声明，但重复的声明会被忽略</p>
+<h5 id="let的块级作用域声明"><a href="#let的块级作用域声明" class="headerlink" title="let的块级作用域声明"></a>let的块级作用域声明</h5><p>块级作用域由最近的一对 <strong>包含花括号{ }</strong> 界定。例：</p>
+<p><strong>if 块</strong>、<strong>while 块</strong>、<strong>function 块</strong>，甚至连单独的块也是 let 声明变量的作用域。</p>
+<p>let不能在同一作用域内声明两次，重复的let声明会抛出SyntaxError</p>
+<p>let 的行为非常适合在循环中声明迭代变量。使用 var 声明的迭代变量会泄漏到循环外部，这种情况应该避免。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;&#125; </span><br><span class="line"><span class="built_in">console</span>.log(i); <span class="comment">// 10 </span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; ++j) &#123;&#125; </span><br><span class="line"><span class="built_in">console</span>.log(j); <span class="comment">// ReferenceError: j 没有定义</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>严格来讲，let 在 JavaScript 运行时中<strong>也会被提升</strong>，但由于“<strong>暂时性死区</strong>”（temporal dead zone）的 缘故，实际上不能在声明之前使用 let 变量。</p>
+<p>所谓暂时性死区,就是<strong>具有块级作用域</strong>,变量需要先声明,然后在使用,否则的话,就会报错。</p>
+<h5 id="const的常量声明"><a href="#const的常量声明" class="headerlink" title="const的常量声明"></a>const的常量声明</h5><p>使用 const 声明的变量必须<strong>同时初始化为某个值</strong>。 一经声明，在其生命周期的任何时候都不能再重新赋予新值。（除要遵循以上规则，其他方面与 <strong>let 声明</strong>是一样的）</p>
+<p>const 声明只应用到<strong>顶级原语</strong>或者<strong>对象</strong>。换句话说，赋值为对象的 const 变量不能再被重新赋值为其他引用值，但<strong>对象的键</strong>则不受限制。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> o1 = &#123;&#125;; </span><br><span class="line">o1 = &#123;&#125;; <span class="comment">// TypeError: 给常量赋值</span></span><br><span class="line"><span class="keyword">const</span> o2 = &#123;&#125;; </span><br><span class="line">o2.name = <span class="string">&#x27;Jake&#x27;</span>; </span><br><span class="line"><span class="built_in">console</span>.log(o2.name); <span class="comment">// &#x27;Jake&#x27; </span></span><br></pre></td></tr></table></figure>
+
+<p>如果想让整个对象都不能修改，可以使用 **Object.freeze()**，这样再给属性赋值时虽然不会报错， 但会静默失败:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> o3 = <span class="built_in">Object</span>.freeze(&#123;&#125;); o3.name = <span class="string">&#x27;Jake&#x27;</span>; <span class="built_in">console</span>.log(o3.name); <span class="comment">// undefined </span></span><br></pre></td></tr></table></figure>
+
+<p>注：开发实践表明，如果开发流程并不会因此而受很大影响，就应该<strong>尽可能地多使用 const 声明</strong>，除非确实需要一个将来会重新赋值的变量。这样可以从根本上保证<strong>提前发现重新赋值导致的 bug</strong>。</p>
+<h5 id="标识符查找"><a href="#标识符查找" class="headerlink" title="标识符查找"></a>标识符查找</h5><p>当在特定上下文中为读取或写入而引用一个标识符时，必须通过搜索确定这个标识符表示什么。搜索开始于作用域链前端，以给定的名称搜索对应的标识符。</p>
+<p>作用域链中的对象也有一个<strong>原型链</strong>，因此搜索可能涉及每个对象的原型链。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> color = <span class="string">&#x27;blue&#x27;</span>; <span class="function"><span class="keyword">function</span> <span class="title">getColor</span>(<span class="params"></span>) </span>&#123;  <span class="keyword">return</span> color; &#125; <span class="built_in">console</span>.log(getColor()); <span class="comment">// &#x27;blue&#x27; </span></span><br></pre></td></tr></table></figure>
+
+<p>对这个搜索过程而言，引用<strong>局部变量</strong>会让搜索自动停止，而不继续搜索下一级变量对象。也就是说，如果局部上下文中有一个同名的标识符，那就不能在该上下文中引用父上下文中的同名标识符，如下面的例子所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> color = <span class="string">&#x27;blue&#x27;</span>; <span class="function"><span class="keyword">function</span> <span class="title">getColor</span>(<span class="params"></span>) </span>&#123;  <span class="keyword">let</span> color = <span class="string">&#x27;red&#x27;</span>;  <span class="keyword">return</span> color; &#125; <span class="built_in">console</span>.log(getColor()); <span class="comment">// &#x27;red&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>访问局部变量比访问全局变量要快，因为<strong>不用切换作用域</strong>。</p>
+<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><p>基本思路：确定哪个变量不会再使用，然后释放它占用的内存。这个过程是周期性的，即垃圾回收程序每隔一定时间（或者说在代码执 行过程中某个预定的收集时间）就会<strong>自动运行</strong>。</p>
+<p>主要的垃圾回收策略：<strong>标记清理、引用计数</strong></p>
+<h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><p>将内存占用量保持在一个较小的值可以让页面性能更好。优化内存占用的最佳手段就是保证在执行代码时只保存必要的数据。如果数据不再必要，那么把它设置为 <strong>null</strong>，从而释放其引用。这也可以叫 作<strong>解除引用</strong>。这个建议最适合<strong>全局变量</strong>和<strong>全局对象</strong>的属性。局部变量在超出作用域后会被自动解除引用， 如下面的例子所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name</span>)</span>&#123;  <span class="keyword">let</span> localPerson = <span class="keyword">new</span> <span class="built_in">Object</span>();  localPerson.name = name;  <span class="keyword">return</span> localPerson; &#125; <span class="keyword">let</span> globalPerson = createPerson(<span class="string">&quot;Nicholas&quot;</span>); <span class="comment">// 解除 globalPerson 对值的引用globalPerson = null;</span></span><br></pre></td></tr></table></figure>
+
+<p>localPerson 在 createPerson()执行完成超出上下文后会自动被解除引用，不需要显式处理。但 globalPerson 是一个全局变量，应该在不再需要时手动解除其引用。</p>
+<h4 id="通过-const-和-let-声明提升性能"><a href="#通过-const-和-let-声明提升性能" class="headerlink" title="通过 const 和 let 声明提升性能"></a>通过 const 和 let 声明提升性能</h4><p>const 和 let 都以块（而非函数）为作用域，所以相比于使用 var，使用这两个新关键字可能会更早地让垃圾回收程序介入，尽早回收应该回收的内存。</p>
+<h4 id="隐藏类和删除操作"><a href="#隐藏类和删除操作" class="headerlink" title="隐藏类和删除操作"></a>隐藏类和删除操作</h4><p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211117171751064.png" alt="image-20211117171751064"></p>
+<h4 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h4><p>意外<strong>声明全局变量</strong>是最常见但也最容易修复的内存泄漏问题。</p>
+<p><strong>定时器</strong>也可能会悄悄地导致内存泄漏。下面的代码中，定时器的回调通过<strong>闭包</strong>引用了外部变量：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;Jake&#x27;</span>; <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;  <span class="built_in">console</span>.log(name); &#125;, <span class="number">100</span>); </span><br></pre></td></tr></table></figure>
+
+<p>只要定时器一直运行，回调函数中引用的 name 就会一直占用内存。</p>
+<p>使用 JavaScript 闭包很容易在不知不觉间造成内存泄漏。请看下面的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> outer = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  <span class="keyword">let</span> name = <span class="string">&#x27;Jake&#x27;</span>;  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  <span class="keyword">return</span> name;  &#125;; &#125;; </span><br></pre></td></tr></table></figure>
+
+<p>调用 outer()会导致分配给 name 的内存被泄漏。以上代码执行后创建了一个内部闭包，只要返回的函数存在就不能清理 name，因为<strong>闭包一直在引用着它</strong>。</p>
+<h4 id="静态分配与对象池"><a href="#静态分配与对象池" class="headerlink" title="静态分配与对象池"></a>静态分配与对象池</h4><p>为了提升 JavaScript 性能，最后要考虑的一点往往就是压榨浏览器了。此时，一个关键问题就是<strong>如何减少浏览器执行垃圾回收的次数</strong>。开发者无法直接控制什么时候开始收集垃圾，但可以<strong>间接控制触发垃圾回收的条件</strong>。理论上，如果能够合理使用分配的内存，同时避免多余的垃圾回收，那就可以保住因 释放内存而损失的性能。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211117173555726.png" alt="image-20211117173555726"></p>
+<h1 id="第5章-基本引用类型"><a href="#第5章-基本引用类型" class="headerlink" title="第5章  基本引用类型"></a>第5章  基本引用类型</h1><p>引用值（或者对象）是某个特定引用类型的<strong>实例</strong>。</p>
+<p>引用类型有时候也 被称为对象定义，因为它们描述了自己的对象应有的属性和方法。</p>
+<p>引用类型虽然有点像类，但跟类并不是一个概念。</p>
+<p>对象被认为是某个特定引用类型的实例。新对象通过使用 new 操作符后跟一个<strong>构造函数（constructor）</strong> 来创建。</p>
+<h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><p>在不给 Date 构造函数传参数的情况下，创建的对象将保存<strong>当前日期和时间</strong>。</p>
+<p><strong>Date.parse()</strong> 方法接收一个表示日期的字符串参数，尝试将这个字符串转换为表示该日期的毫秒数。</p>
+<ul>
+<li>“月/日/年”，如”5/23/2019”； </li>
+<li>“月名 日, 年”，如”May 23, 2019”；</li>
+</ul>
+<p>如果传给 Date.parse()的字符串并不表示日期，则该方法会返回 <strong>NaN</strong>。如果直接把表示日期的字符串传给 Date 构造函数，那么 Date 会在<strong>后台</strong>调用 Date.parse()：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someDate = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(<span class="string">&quot;May 23, 2019&quot;</span>));<span class="keyword">let</span> someDate = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;May 23, 2019&quot;</span>); <span class="comment">//两行代码等价</span></span><br></pre></td></tr></table></figure>
+
+<p>传给 <strong>Date.UTC()<strong>的参数是年、零起点月数（</strong>1 月是 0</strong>，2 月是 1，以此类推）、日（1<del>31）、时（0</del>23）、 分、秒和毫秒。这些参数中，只有前两个（年和月）是必需的。如果不提供日，那么默认为 1 日。其他 参数的默认值都是 0。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// GMT 时间 2000 年 1 月 1 日零点let y2k = new Date(Date.UTC(2000, 0)); // GMT 时间 2005 年 5 月 5 日下午 5 点 55 分 55 秒let allFives = new Date(Date.UTC(2005, 4, 5, 17, 55, 55)); </span></span><br></pre></td></tr></table></figure>
+
+<p>与 Date.parse()一样，Date.UTC()也会被 Date 构造函数<strong>隐式调用</strong>，但有一个区别：这种情况下创建的是<strong>本地日期</strong>(隐式调用下），不是 GMT 日期。</p>
+<p>Date 构造函数跟 Date.UTC()接收的参数是一样的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 本地时间 2000 年 1 月 1 日零点let y2k = new Date(2000, 0); </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>ECMAScript 还提供了 Date.now()方法，返回表示方法执行时日期和时间的<strong>毫秒数</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 起始时间let start = Date.now(); // 调用函数doSomething(); // 结束时间let stop = Date.now(), result = stop - start;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="日期-时间组件方法"><a href="#日期-时间组件方法" class="headerlink" title="日期/时间组件方法"></a>日期/时间组件方法</h3><p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211118112906477.png" alt="image-20211118112906477"></p>
+<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211118112936037.png" alt="image-20211118112936037"></p>
+<h2 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h2><p>语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> expression = <span class="regexp">/pattern/</span>flags; <span class="comment">//pattern为模式，flag为标记</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>pattern可以是是任何简单或复杂的正则表达式，包括<strong>字符类、限定符、 分组、向前查找和反向引用</strong>。</p>
+<p>flag用于控制正则表达式的行为。下面给出了表示匹配模式的标记。</p>
+<ul>
+<li> g：全局模式，表示查找字符串的全部内容，而不是找到第一个匹配的内容就结束。 </li>
+<li> i：不区分大小写，表示在查找匹配时忽略 pattern 和字符串的大小写。 </li>
+<li> m：多行模式，表示查找到一行文本末尾时会继续查找。 </li>
+<li> y：粘附模式，表示只查找从 lastIndex 开始及之后的字符串。 </li>
+<li> u：Unicode 模式，启用 Unicode 匹配。 </li>
+<li> s：dotAll 模式，表示元字符.匹配任何字符（包括\n 或\r）。</li>
+</ul>
+<p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 匹配字符串中的所有&quot;at&quot; let pattern1 = /at/g; // 匹配第一个&quot;bat&quot;或&quot;cat&quot;，忽略大小写let pattern2 = /[bc]at/i; // 匹配所有以&quot;at&quot;结尾的三字符组合，忽略大小写let pattern3 = /.at/gi; </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>所有元字符在模式中也必须转义，包括： ( [ { \ ^ $ | ) ] } ? * + .</p>
+<p>元字符在正则表达式中都有一种或多种特殊功能，所以要匹配上面这些字符本身，就必须使用<strong>反斜杠</strong>来转义。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 匹配第一个&quot;bat&quot;或&quot;cat&quot;，忽略大小写let pattern1 = /[bc]at/i; // 匹配第一个&quot;[bc]at&quot;，忽略大小写let pattern2 = /\[bc\]at/i; // 匹配所有以&quot;at&quot;结尾的三字符组合，忽略大小写let pattern3 = /.at/gi; // 匹配所有&quot;.at&quot;，忽略大小写let pattern4 = /\.at/gi; </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>正则表达式可以使用<strong>字面量形式</strong>定义，也可以使用 <strong>RegExp 构造函数</strong>来 创建，它接收两个参数：<strong>模式字符串</strong>和（可选的）<strong>标记字符串</strong>。任何使用字面量定义的正则表达式也可以通过构造函数来创建。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pattern2 = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&quot;[bc]at&quot;</span>, <span class="string">&quot;i&quot;</span>); </span><br></pre></td></tr></table></figure>
+
+<p>注意，RegExp 构造函数的两个参数都是字符串。因为 RegExp 的模式参数是字符串，所以在某些情况下需要<strong>二次转义</strong>。所有元字符都必须二次转义，包括转义字符序列，如\n（\转义后的字符串是<code>\\</code>，在正则表达式字符串中则要写成<code>\\\\</code>）。</p>
+<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211118114322833.png" alt="image-20211118114322833"></p>
+<h3 id="RegExp实例属性"><a href="#RegExp实例属性" class="headerlink" title="RegExp实例属性"></a>RegExp实例属性</h3><p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211118114700769.png" alt="image-20211118114700769"></p>
+<h3 id="RegExp实例方法"><a href="#RegExp实例方法" class="headerlink" title="RegExp实例方法"></a>RegExp实例方法</h3><h4 id="exec"><a href="#exec" class="headerlink" title="exec()"></a>exec()</h4><p>RegExp 实例的主要方法是 <strong>exec()<strong>，主要用于</strong>配合捕获组使用</strong>。这个方法只接收一个参数，即要<strong>应用模式的字符串</strong>。</p>
+<p>如果找到了匹配项，则返回包含第一个匹配信息的数组；如果没找到匹配项，则返回 null。</p>
+<p>返回的数组虽然是 Array 的实例，但包含两个额外的属性：index 和 input。index 是字符串中匹配模式的起始位置，input 是要查找的字符串。</p>
+<p>这个数组的<strong>第一个元素</strong>是<strong>匹配整个模式的字符串</strong>， <strong>其他元素</strong>是<strong>与表达式中的捕获组匹配的字符串</strong>。如果模式中没有捕获组，则数组只包含一个元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="string">&quot;mom and dad and baby&quot;</span>; <span class="keyword">let</span> pattern = <span class="regexp">/mom( and dad( and baby)?)?/gi</span>; <span class="keyword">let</span> matches = pattern.exec(text); <span class="built_in">console</span>.log(matches.index); <span class="comment">// 0 console.log(matches.input); // &quot;mom and dad and baby&quot; console.log(matches[0]); // &quot;mom and dad and baby&quot; console.log(matches[1]); // &quot; and dad and baby&quot; console.log(matches[2]); // &quot; and baby&quot; </span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="string">&quot;cat, bat, sat, fat&quot;</span>; <span class="keyword">let</span> pattern = <span class="regexp">/.at/g</span>; <span class="keyword">let</span> matches = pattern.exec(text); <span class="built_in">console</span>.log(matches.index); <span class="comment">// 0 console.log(matches[0]); // cat console.log(pattern.lastIndex); // 3 matches = pattern.exec(text); console.log(matches.index); // 5 console.log(matches[0]); // bat console.log(pattern.lastIndex); // 8 matches = pattern.exec(text); console.log(matches.index); // 10 console.log(matches[0]); // sat console.log(pattern.lastIndex); // 13</span></span><br></pre></td></tr></table></figure>
+
+<p>模式设置了全局标记，因此每次调用 exec()都会返回字符串中的下一个匹配项，直到搜索到字符串末尾。注意模式的 lastIndex 属性每次都会变化。在<strong>全局匹配模式</strong>下，每次调用 exec()都会更新 lastIndex 值，以反映上次匹配的最后一个字符的索引。</p>
+<h4 id="test"><a href="#test" class="headerlink" title="test()"></a>test()</h4><p>正则表达式的另一个方法是 **test()**，接收一个字符串参数。如果输入的文本与模式匹配，则参数返回 true，否则返回 false。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="string">&quot;000-00-0000&quot;</span>; <span class="keyword">let</span> pattern = <span class="regexp">/\d&#123;3&#125;-\d&#123;2&#125;-\d&#123;4&#125;/</span>; <span class="keyword">if</span> (pattern.test(text)) &#123;  <span class="built_in">console</span>.log(<span class="string">&quot;The pattern was matched.&quot;</span>); &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个用法常用于<strong>验证用户输入</strong>，此时我们只在乎输入是否有效，不关心为什么无效。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pattern = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&quot;\\[bc\\]at&quot;</span>, <span class="string">&quot;gi&quot;</span>); <span class="built_in">console</span>.log(pattern.toString()); <span class="comment">// /\[bc\]at/gi console.log(pattern.toLocaleString()); // /\[bc\]at/gi</span></span><br></pre></td></tr></table></figure>
+
+<p>toLocaleString()和 toString()返回的都是其<strong>字面量</strong>的形式</p>
+<p>正则表达式的 valueOf()方法返回<strong>正则表达式本身</strong></p>
+<h3 id="RegExp构造函数属性"><a href="#RegExp构造函数属性" class="headerlink" title="RegExp构造函数属性"></a>RegExp构造函数属性</h3><p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211118145130952.png" alt="image-20211118145130952"></p>
+<p>注意：RegExp 构造函数的所有属性都没有任何 Web 标准出处，因此<strong>不要在生产环境中使用它们</strong>。</p>
+<h3 id="模式局限"><a href="#模式局限" class="headerlink" title="模式局限"></a>模式局限</h3><p>ECMAscript中目前还不支持以下特性：</p>
+<ul>
+<li> \A 和\Z 锚（分别匹配字符串的开始和末尾） </li>
+<li> 联合及交叉类 </li>
+<li> 原子组 </li>
+<li> x（忽略空格）匹配模式 </li>
+<li> 条件式匹配 </li>
+<li> 正则表达式注释</li>
+</ul>
+<p>虽然还有这些局限，ECMAScript 的正则表达式已经非常强大，可以用于<strong>大多数模式匹配任务</strong>。</p>
+<h2 id="原始值包装类型"><a href="#原始值包装类型" class="headerlink" title="原始值包装类型"></a>原始值包装类型</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="string">&quot;some text&quot;</span>; <span class="keyword">let</span> s2 = s1.substring(<span class="number">2</span>); </span><br></pre></td></tr></table></figure>
+
+<p>当 第二行访问 s1 时，是以读模式访问的，也就是要从内存中读取变量保存的值。</p>
+<p>在以读模式访问字符串值的任何时候，后台都会执行以下 3 步：</p>
 <ol>
-<li><code>&lt;hr /&gt;</code>标签和<code>&lt;br /&gt;</code>标签一样也是一个<strong>空标签</strong>，所以只有一个开始标签，没有结束标签。</li>
-<li><code>&lt;hr /&gt;</code>标签的在浏览器中的默认样式线条比较粗，颜色为灰色，可能有些人觉得这种样式不美观，没有关系，这些外在样式在我们以后学习了css样式表之后，都可以对其修改。</li>
-<li>大家注意，现在一般使用 xhtml1.0 的版本（其它标签也是），这种版本比较规范。</li>
+<li>创建一个 String 类型的实例；</li>
+<li>调用实例上的特定方法；</li>
+<li>销毁实例。</li>
 </ol>
-<h3 id="lt-ul-gt-lt-li-gt-标签"><a href="#lt-ul-gt-lt-li-gt-标签" class="headerlink" title="&lt;ul&gt;&lt;li&gt;标签"></a>&lt;<code>ul</code>&gt;&lt;li<code>&gt;</code>标签</h3><p>​        <img src="http://img.mukewang.com/52d383cd0001085503320216.jpg"></p>
-<p>​       这些列表就可以使用ul-li标签来完成。ul-li是<strong>没有前后顺序</strong>的信息列表。ul是表的总框架，li为ul中每一条信息。例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>精彩少年<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>美丽突然出现<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>触动心灵的旋律<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<p>这三步即上述代码第二行相当于执行了如下ECMAScript代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;some text&quot;</span>); <span class="keyword">let</span> s2 = s1.substring(<span class="number">2</span>); s1 = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
 
-<h3 id="lt-ol-gt-lt-li-gt-标签"><a href="#lt-ol-gt-lt-li-gt-标签" class="headerlink" title="&lt;ol&gt;&lt;li&gt;标签"></a>&lt;<code>ol</code>&gt;&lt;li<code>&gt;</code>标签</h3><p>​        <img src="http://img.mukewang.com/52d3884a00014b0702270264.jpg"></p>
-<p>​       这些列表就可以使用ol-li标签来完成。ol-li是<strong>有前后顺序</strong>的信息列表。ol是表的总框架，li为ul中每一条信息。例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>前端开发面试心法 <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>零基础学习html<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>JavaScript全攻略<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>这种行为可以让原始值拥有<strong>对象</strong>的行为。</p>
+<p>对<strong>布尔值</strong>和<strong>数值</strong>而言，以上 3 步<strong>也会在后台发生</strong>，只不过使用的是 Boolean 和 Number 包装类型而已。</p>
+<p>引用类型与原始值包装类型的主要区别在于<strong>对象的生命周期</strong>。</p>
+<p>在通过 <strong>new 实例化引用类型</strong>后，得到的实例会在<strong>离开作用域</strong>时被销毁</p>
+<p>而<strong>自动创建的原始值包装对象</strong>则只存在于<strong>访问它的那行代码执行期间</strong>。这意味着不能在运行时给原始值添加属性和方法。</p>
+<p>可以<strong>显式地使用</strong> Boolean、Number 和 String 构造函数创建原始值包装对象。</p>
+<p>不过应该在确实必要时再这么做，否则容易让开发者疑惑，分不清它们到底是原始值还是引用值。</p>
+<p>在原始值包装类型的实 例上调用 typeof 会返回”object”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = <span class="keyword">new</span> <span class="built_in">Number</span>(value); <span class="comment">// 构造函数console.log(typeof obj); // &quot;object&quot; </span></span><br></pre></td></tr></table></figure>
 
-<p><img src="http://img.mukewang.com/52d3893400019ee003830208.jpg"></p>
-<h3 id="lt-img-gt-标签"><a href="#lt-img-gt-标签" class="headerlink" title="&lt;img&gt;标签"></a>&lt;<code>img</code>&gt;标签</h3><p>​       在网页的制作中为使网页炫丽美观，肯定是缺少不了图片，可以使用<code>&lt;img&gt;</code>标签来插入图片。</p>
-<p><strong>语法：</strong></p>
-<img src="D:/typora/Typora/图片地址" alt="下载失败时的替换文本" title = "提示文本">
 
-<p><strong>举例：</strong></p>
-<p><img src = "D:/typora/Typora/myimage.gif" alt = "My Image" title = "My Image" />(<strong>注意最后的“/”</strong>)</p>
-<p><strong>讲解：</strong></p>
-<p><strong>1</strong>、src：标识图像的位置；</p>
-<p><strong>2</strong>、alt：指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本；</p>
-<p><strong>3</strong>、title：提供在图像可见时对图像的描述(<strong>鼠标滑过图片时显示的文本</strong>)；</p>
-<p><strong>4、</strong>图像可以是GIF，PNG，JPEG格式的图像文件。</p>
-<h3 id="lt-a-gt-标签"><a href="#lt-a-gt-标签" class="headerlink" title="&lt;a&gt;标签"></a>&lt;<code>a</code>&gt;标签</h3><p>​        使用<code>&lt;a&gt;</code>标签可实现超链接，它在网页制作中可以说是无处不在，只要有链接的地方，就会有这个标签。</p>
-<p><strong>语法：</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a  href=<span class="string">&quot;目标网址&quot;</span>  title=<span class="string">&quot;鼠标滑过显示的文本&quot;</span>&gt;链接显示的文本&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>例如：</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a  href=<span class="string">&quot;http://www.imooc.com&quot;</span>  title=<span class="string">&quot;点击进入慕课网&quot;</span>&gt;click here!&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h3><p>在布尔表达式中使用 Boolean 对象时,容易引起误会。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> falseObject = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>); <span class="keyword">let</span> result = falseObject &amp;&amp; <span class="literal">true</span>; <span class="built_in">console</span>.log(result); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
-<p>​       title属性的作用，鼠标滑过链接文字时会显示这个属性的文本内容。这个属性在实际网页开发中作用很大，主要方便搜索引擎了解链接地址的内容（<strong>语义化更友好</strong>），如右侧案例代码（11-13行）。</p>
-<p><strong>注意：</strong>还有一个有趣的现象不知道小伙伴们发现了没有，只要为文本加入a标签后，文字的颜色就会自动变为蓝色（被点击过的文本颜色为紫色），颜色很难看吧，不过没有关系后面我们学习了css样子就可以设置过来（a{color:#000}),后面会详细讲解。</p>
-<h4 id="lt-a-gt-标签中的target属性"><a href="#lt-a-gt-标签中的target属性" class="headerlink" title="&lt;a&gt;标签中的target属性"></a>&lt;<code>a</code>&gt;标签中的target属性</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>target属性<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com/?tn=98010089_dg&quot;</span>  <span class="attr">target</span>=<span class="string">&quot;_self&quot;</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com/?tn=98010089_dg&quot;</span>  <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这个表达式是对 falseObject 对象而不是对它表示的值（false）求值。<strong>所有对象在布尔表达式中都会自动转换为 true</strong>，因此 falseObject 在这个表达式里实际上表示一个 true 值</p>
+<p>原始值和引用值（<strong>Boolean 对象</strong>）还有几个区别。</p>
+<p>typeof 操作符对原始值返回 “boolean”，但对引用值返回”object”。</p>
+<p>Boolean 对象是 Boolean 类型的实例，在使用 instaceof 操作符时返回 true，但对原始值则返回 false。</p>
+<h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p>Number 是对应数值的引用类型。</p>
+<p>与 Boolean 类型一样，Number 类型重写了 valueOf()、toLocaleString()和 toString()方法。valueOf()方法返回 <strong>Number 对象表示的原始数值</strong>，另外两个方法返回<strong>数值字符串</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span>; <span class="built_in">console</span>.log(num.toString()); <span class="comment">// &quot;10&quot; console.log(num.toString(2)); // &quot;1010&quot; console.log(num.toString(8)); // &quot;12&quot; console.log(num.toString(10)); // &quot;10&quot; console.log(num.toString(16)); // &quot;a&quot; </span></span><br></pre></td></tr></table></figure>
 
-<p>​        a标签有的target属性，代表打开网页的方式。可选值为”<code>_</code>self和<code>_</code>blank”，<strong>默认值</strong>为<code>_</code>self，代表在当前页面打开链接，<code>_</code>blank代表在新窗口打开链接。</p>
-<h3 id="lt-table-gt-表格标签"><a href="#lt-table-gt-表格标签" class="headerlink" title="&lt;table&gt;表格标签"></a>&lt;<code>table</code>&gt;表格标签</h3><p>​        <img src="https://img1.mukewang.com/5e9180a300019f0611480732.jpg"></p>
-<p><img src="https://img.mukewang.com/5e9180d50001d1ec18461296.jpg"></p>
-<p><img src="https://img4.mukewang.com/5e9180e20001402015880712.jpg"></p>
-<p>创建表格的四个元素：table、tr、th、td</p>
-<p>1、<table>…</table>：整个表格以<table>标记开始、</table>标记结束。</p>
-<p>2、<tr>…</tr>：表格的一行，所以有几对tr 表格就有几行。</p>
-<p>3、<td>…</td>：表格的一个单元格，一行中包含几对<td>…</td>，说明一行中就有几列。</p>
-<p>4、<th>…</th>：表格的头部的一个单元格，表格表头。</p>
-<p>5、表格中列的个数，取决于一行中数据单元格的个数。</p>
-<p>6、border属性可以为表格添加边框，属性值为数字。</p>
-<p><strong>注意：</strong></p>
-<p>1、table标签用来定义整个表格，为双标签，必须有结束标签。</p>
-<p>2、table标签里面可以放caption标签和tr标签。</p>
-<p>3、caption标签用来定义表格的标题。</p>
-<p>4、tr标签用来设置表格的行，tr里面只能放th或者td标签，一组tr标签代表一行。</p>
-<p>5、th用来设置表格的标题，会加粗居中显示。也就是th标签中的文本默认为粗体并且居中显示。</p>
-<p>6、td同来设置表格的列，一组td标签代表一列。</p>
-<p>7、table表格在没有添加border属性之前, 在浏览器中显示是没有表格线的。</p>
-<h4 id="border"><a href="#border" class="headerlink" title="border"></a>border</h4><p>​        border 属性规定围绕表格的边框的宽度。</p>
-<p>​        border 属性会为每个单元格应用边框，并用边框围绕表格。如果 border 属性的值发生改变，那么只有表格周围边框的尺寸会发生变化。表格内部的边框则是 1 像素宽。</p>
-<p><strong>提示：</strong>设置 border=”0”，可以显示没有边框的表格。</p>
-<p>​        从实用角度出发，最好不要规定边框，而是使用 CSS 来添加边框样式和颜色。</p>
-<h4 id="thead、tbody、tfoot"><a href="#thead、tbody、tfoot" class="headerlink" title="thead、tbody、tfoot"></a>thead、tbody、tfoot</h4><p>​        <thead>标签定义表格头部,<tbody>标签来定义表格的内容,<tfoot>来定义表格的底部。</p>
-<p><img src="https://img.mukewang.com/5e91834a000161cc06140254.jpg"></p>
-<p>1、<code>&lt;thead&gt;</code> 标签定义表格的表头。该标签用于组合 HTML 表格的表头内容。</p>
-<p>2、<code>&lt;tbody&gt;…&lt;/tbody&gt;</code>：如果不加<thead><tbody><tfooter> , table表格加载完后才显示。加上这些表格结构， tbody包含行的内容下载完优先显示，不必等待表格结束后在显示，同时如果表格很长，用tbody分段，可以一部分一部分地显示。（通俗理解table 可以按结构一块块的显示，不在等整个表格加载完后显示。）</p>
-<p>3、<code>&lt;tfoot&gt;</code> 元素用于对 HTML 表格中的表注（页脚）内容进行分组。</p>
-<p>4、thead、tfoot 以及 tbody 元素使您有能力对表格中的行进行分组。当您创建某个表格时，您也许希望拥有一个标题行，一些带有数据的行，以及位于底部的一个总计行。这种划分使浏览器有能力支持独立于表格标题和页脚的表格正文滚动。当长的表格被打印时，表格的表头和页脚可被打印在包含表格数据的每张页面上。例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>使用thead、tbody、tfoot标签<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span> = <span class="string">&quot;1&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>科目<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>分数<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>语文<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>99<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>数学<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>60<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">tfoot</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>总分<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>159<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">tfoot</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<h3 id="lt-form-gt-表单标签——实现用户交互"><a href="#lt-form-gt-表单标签——实现用户交互" class="headerlink" title="&lt;form&gt;表单标签——实现用户交互"></a>&lt;<code>form</code>&gt;表单标签——实现用户交互</h3><p>​        form表单是可以把浏览者输入的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。</p>
-<p>语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form   method=<span class="string">&quot;传送方式&quot;</span>   action=<span class="string">&quot;服务器文件&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p>1.<strong><form> ：</strong><form>标签是成对出现的，以<form>开始，以</form>结束。</p>
-<p>2.<strong>action</strong> <strong>：</strong>浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。</p>
-<p>3.<strong>method</strong> <strong>：</strong> 数据传送的方式（get/post）。例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form    method=<span class="string">&quot;post&quot;</span>   action=<span class="string">&quot;save.php&quot;</span>&gt;</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> /&gt;</span></span></span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;pass&quot;</span>&gt;</span>密码:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;pass&quot;</span> /&gt;</span></span></span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="格式化数值"><a href="#格式化数值" class="headerlink" title="格式化数值"></a>格式化数值</h4><p>**toFixed()**方法返回包含指定小数点位数的数值字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span>; <span class="built_in">console</span>.log(num.toFixed(<span class="number">2</span>)); <span class="comment">// &quot;10.00&quot; </span></span><br></pre></td></tr></table></figure>
 
-<p><strong>注意:</strong></p>
-<p>​        所有表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在 <form></form> 标签之间（否则用户输入的信息可提交不到服务器上哦！）。</p>
-<h3 id="lt-input-gt-标签"><a href="#lt-input-gt-标签" class="headerlink" title="&lt;input&gt;标签"></a>&lt;<code>input</code>&gt;标签</h3><p>​        当用户要在表单中键入字母、数字等内容时，就会用到<strong>文本输入框</strong>。文本框也可以转化为<strong>密码输入框</strong>。</p>
-<p>语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;   <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text/password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;名称&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本&quot;</span> /&gt;</span></span>&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>如果数值本身的小数位超过了参数指定的位数，则四舍五入到最接近的小数位：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10.005</span>; <span class="built_in">console</span>.log(num.toFixed(<span class="number">2</span>)); <span class="comment">// &quot;10.01&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>1</strong>、type：<br>  当type=”<strong>text</strong>“时，输入框为<strong>文本输入框</strong>;</p>
-<p>  当type=”<strong>password</strong>“时,输入框为<strong>密码输入框。</strong></p>
-<p><strong>2</strong>、name：为文本框命名，以备后台程序ASP 、PHP使用。</p>
-<p><strong>3</strong>、value：为文本输入框设置默认值。(一般起到提示作用)</p>
-<h4 id="placeholder属性"><a href="#placeholder属性" class="headerlink" title="placeholder属性"></a>placeholder属性</h4><p>​        input标签中占位符placeholder,属性，有时候需要提示用户输入框需要输入框的内容，那么就会用到我们的占位符，比如下面的效果：</p>
-<p><img src="https://img.mukewang.com/5e918efa0001a01204260146.jpg"></p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210513014018787.png" alt="image-20210513014018787"></p>
-<p>1、placeholder属性为输入框占位符,里面可以放提示的输入信息。</p>
-<p>2、placeholder属性的值可以任意填写,当输入框输入内容时,占位符内容消失,输入框无内容时,占位符内容显示。</p>
-<p>3、占位符内容不是输入框真正的内容。</p>
-<h4 id="number数字输入框"><a href="#number数字输入框" class="headerlink" title="number数字输入框"></a>number数字输入框</h4><p>number 属性为input中写入type的属性。详情如下：<img src="https://img1.mukewang.com/5e9196a5000183f107300076.jpg"></p>
-<p>1、input的type属性设置为number,则表示该输入框的类型为数字。</p>
-<p>2、数字框只能输入数字，输入其他字符无效。</p>
-<p>3、数字框最右侧会有一个加减符号,可以调整输入数字的大小,不同浏览器表现不一致。</p>
-<h4 id="url网址输入框"><a href="#url网址输入框" class="headerlink" title="url网址输入框"></a>url网址输入框</h4><p><img src="https://img3.mukewang.com/5e9198fb0001934606750121.jpg"></p>
-<p>1、input的type属性设置为url,则表示该输入框的类型为网址。</p>
-<p>2、数字框的值需以http://或者https://开头,且后面必须有内容,否则表单提交的时候会报错误提示。</p>
-<h4 id="email邮箱输入框"><a href="#email邮箱输入框" class="headerlink" title="email邮箱输入框"></a>email邮箱输入框</h4><p><img src="https://img.mukewang.com/5e919cb50001312908010115.jpg"></p>
-<p><img src="https://img.mukewang.com/5e91a7da0001ef2207400142.jpg"></p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210513132044684.png" alt="image-20210513132044684"></p>
-<p>1、Input的type属性设置为email,则表示该输入框的类型为邮箱。</p>
-<p>2、数字框的值必须包含@。</p>
-<p>3、数字框的值@之后必须有内容,否则会报错误提示。</p>
-<h4 id="单选框、复选框"><a href="#单选框、复选框" class="headerlink" title="单选框、复选框"></a>单选框、复选框</h4><p>语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input   type=<span class="string">&quot;radio/checkbox&quot;</span>   value=<span class="string">&quot;值&quot;</span>    name=<span class="string">&quot;名称&quot;</span>   checked=<span class="string">&quot;checked&quot;</span>/&gt;</span><br></pre></td></tr></table></figure>
 
-<p>1、<strong>type:</strong></p>
-<p>  当 <strong>type=”radio”</strong> 时，控件为<strong>单选框</strong></p>
-<p>  当 <strong>type=”checkbox”</strong> 时，控件为<strong>复选框</strong></p>
-<p>2、<strong>value：</strong>提交数据到服务器的值（后台程序PHP使用）</p>
-<p>3、<strong>name：</strong>为控件命名，以备后台程序 ASP、PHP 使用</p>
-<p>4、<strong>checked：</strong>当设置 checked=”checked” 时，该选项被默认选中。例：</p>
-<p><img src="http://img.mukewang.com/52e5f7c60001a23f07360267.jpg"></p>
-<p><img src="http://img.mukewang.com/52e5f8010001159804900257.jpg"></p>
-<p>注：<strong>同一组的单选按钮，name 取值一定要一致</strong>，比如上面例子为同一个名称“radioLove”，这样同一组的单选按钮才可以起到单选的作用。</p>
-<h4 id="提交、重置按钮"><a href="#提交、重置按钮" class="headerlink" title="提交、重置按钮"></a>提交、重置按钮</h4><p>​        表单中有两种按钮：提交、重置。当需要提交表单到服务器，需用到提交按钮。</p>
-<p>语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input   type=<span class="string">&quot;submit&quot;</span>   value=<span class="string">&quot;按钮上的文字&quot;</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">input</span>   <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span>    <span class="attr">value</span>=<span class="string">&quot;按钮上的文字&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>type：只有当type值设置为submit时，按钮才有提交作用。例：</p>
-<p><img src="http://img.mukewang.com/52e613350001461604820109.jpg"></p>
-<p><img src="http://img.mukewang.com/52e6126f0001496a04480218.jpg"></p>
-<p><img src="http://img.mukewang.com/52e618680001a6b204570101.jpg"></p>
-<p><img src="http://img.mukewang.com/52e6189e000186b604480218.jpg"></p>
-<p><img src="http://img.mukewang.com/52e618bc00015a1004480218.jpg"></p>
-<h3 id="lt-textarea-gt-标签"><a href="#lt-textarea-gt-标签" class="headerlink" title="&lt;textarea&gt;标签"></a>&lt;<code>textarea</code>&gt;标签</h3><p>​        当用户需要在表单中输入大段文字时，需要用到文本输入域。</p>
-<p>语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea  rows=<span class="string">&quot;行数&quot;</span> cols=<span class="string">&quot;列数&quot;</span>&gt;文本&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<p>**toExponential()**返回以科学记数法（也称为指数记数法）表示的数值字符串。</p>
+<p>接收一个参数，表示结果中小数的位数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span>; <span class="built_in">console</span>.log(num.toExponential(<span class="number">1</span>)); <span class="comment">// &quot;1.0e+1&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>注：col可用css中width代替，row可用height代替。</p>
-<p>1<code>、&lt;textarea&gt;标签是成对出现的，以&lt;textarea&gt;开始，以&lt;/textarea&gt;结束。 2</code>、<strong>cols ：</strong><code>多行输入域的**列数**。 3</code>、<strong>rows ：</strong><code>多行输入域的**行数**。 4</code>、在<textarea></textarea>标签之间可以输入<strong>默认值</strong>。例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form  method=<span class="string">&quot;post&quot;</span> action=<span class="string">&quot;save.php&quot;</span>&gt;        <span class="xml"><span class="tag">&lt;<span class="name">label</span>&gt;</span>联系我们<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span>        <span class="xml"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">cols</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span> &gt;</span>在这里输入内容...<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span>&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://img.mukewang.com/52e5b4040001f4af05760367.jpg"></p>
-<h3 id="lt-label-gt-标签"><a href="#lt-label-gt-标签" class="headerlink" title="&lt;label&gt;标签"></a>&lt;<code>label</code>&gt;标签</h3><p>​        在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）。</p>
-<p>语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="keyword">for</span>=<span class="string">&quot;控件id名称&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p>注意：标签的 <strong>for 属性中的值</strong>应当与<strong>相关控件的 id 属性值</strong>一定要相同。例：</p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210513175258787.png" alt="image-20210513175258787"></p>
-<p>结果：</p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210513175401702.png" alt="image-20210513175401702"></p>
-<p>​        当点击“输入你的用户名”时，触发input标签。</p>
-<h3 id="lt-select-gt-lt-option-gt-标签"><a href="#lt-select-gt-lt-option-gt-标签" class="headerlink" title="&lt;select&gt;&lt;option&gt;标签"></a>&lt;<code>select</code>&gt;&lt;<code>option</code>&gt;标签</h3><p>例：</p>
-<img src="https://img2.mukewang.com/5e91a9c80001810a11210735.jpg" style="zoom: 50%;" />
+<p>**toPrecision()**方法会根据情况返回最合理的输出结果，可能是固定长度，也可能是科学记数法形式。这个方法接收一个参数，表示结果中数字的总位数（不包含指数）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">99</span>; <span class="built_in">console</span>.log(num.toPrecision(<span class="number">1</span>)); <span class="comment">// &quot;1e+2&quot; console.log(num.toPrecision(2)); // &quot;99&quot; console.log(num.toPrecision(3)); // &quot;99.0&quot; </span></span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20210513180653521.png" alt="image-20210513180653521"></p>
-<p>1、select和option标签都是双标签，它总是成对出现的，需要首标签和尾标签。</p>
-<p>2、select标签里面只能放option标签，表示下拉列表的选项。</p>
-<p>3、option标签放选项内容，不放置其他标签。</p>
-<p>4、value：</p>
-<p><a target="_blank" rel="noopener" href="http://img.mukewang.com/52e6037300015a9905030165.jpg"><img src="http://img.mukewang.com/52e6037300015a9905030165.jpg" alt="img"></a></p>
-<p>5、selected=”selected”：</p>
-<p>设置selected=”selected”属性，则该选项就被默认选中。</p>
-<h2 id="html5文档结构"><a href="#html5文档结构" class="headerlink" title="html5文档结构"></a>html5文档结构</h2><ol>
-<li><code>&lt;!DOCTYPE html&gt;</code>: 文档类型声明，表示该文件为 HTML5文件。<code>&lt;!DOCTYPE&gt;</code>: 声明必须是 HTML 文档的第一行，位于 <html> 标签之前</li>
-<li><code>&lt;html&gt;&lt;/html&gt;</code>标签对：<html>标签位于HTML文档的最前面，用来标识HTML文档的开始；</html>标签位于HTML文档的最后面，用来标识HTML 文档的结束；这两个标签对成对存在，中间的部分是文档的头部和主题。</li>
-<li><code>&lt;head&gt;&lt;/head&gt;</code>标签对：标签包含有关HTML文档的信息，可以包含一些辅助性标签。如<title></title>，<link /><meta />，<style></style>，<script></script>等，但是浏览器除了会在标题栏显示<title>元素的内容外，不会向用户显示head元素内的其他任何内容。</li>
-<li><code>&lt;body&gt;&lt;/body&gt;</code>标签对：它是HTML文档的主体部分，在此标签中可以包含<p><h1><br>等众多标签，<body>标签出现在</head>标签之后，且必须在闭标签</html>之前闭合</li>
-</ol>
-  
+
+
+<p>并不建议直接实例化 Number 对象。在处理原始数值和引用数值时，typeof 和 instacnceof 操作符会返回不同的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numberObject = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>); <span class="keyword">let</span> numberValue = <span class="number">10</span>; <span class="built_in">console</span>.log(<span class="keyword">typeof</span> numberObject); <span class="comment">// &quot;object&quot; console.log(typeof numberValue); // &quot;number&quot; console.log(numberObject instanceof Number); // true console.log(numberValue instanceof Number); // false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String 是对应字符串的引用类型。</p>
+<p>String 对象的方法可以在<strong>所有字符串原始值</strong>上调用。</p>
+<p>3个继承的方法 valueOf()、toLocaleString() 和 toString()都返回对象的<strong>原始字符串值</strong>。</p>
+<h4 id="String类型提供的解析和操作字符串的方法"><a href="#String类型提供的解析和操作字符串的方法" class="headerlink" title="String类型提供的解析和操作字符串的方法"></a>String类型提供的解析和操作字符串的方法</h4><h5 id="JavaScript字符"><a href="#JavaScript字符" class="headerlink" title="JavaScript字符"></a>JavaScript字符</h5><p>**charAt()**方法返回给定索引位置的字符，由传给方法的整数参数指定。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="string">&quot;abcde&quot;</span>; <span class="built_in">console</span>.log(message.charAt(<span class="number">2</span>)); <span class="comment">// &quot;c&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>**charCodeAt()**方法可以查看指定码元的字符编码。返回指定索引位置的码元值。索引以整数指定。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="string">&quot;abcde&quot;</span>; <span class="comment">// Unicode &quot;Latin small letter C&quot;的编码是 U+0063 console.log(message.charCodeAt(2)); // 99 // 十进制 99 等于十六进制 63 console.log(99 === 0x63); // true </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>**fromCharCode()**方法用于根据给定的 UTF-16 码元创建字符串中的字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">String</span>.fromCharCode(<span class="number">0x61</span>, <span class="number">0x62</span>, <span class="number">0x63</span>, <span class="number">0x64</span>, <span class="number">0x65</span>)); <span class="comment">// &quot;abcde&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>对于 U+0000~U+FFFF 范围内的字符，length、charAt()、charCodeAt()和 fromCharCode() 返回的结果都跟预期是一样的。</p>
+<p>这是因为在这个范围内，每个字符都是用 <strong>16 位</strong>表示的，而这几个方法也都基于 16 位码元完成操作。</p>
+<h5 id="normalize-方法"><a href="#normalize-方法" class="headerlink" title="normalize() 方法"></a>normalize() 方法</h5><p>某些 Unicode 字符可以有多种编码方式。有的字符既可以通过一个 BMP 字符表示，也可以通过一 个代理对表示。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// U+00C5：上面带圆圈的大写拉丁字母 A console.log(String.fromCharCode(0x00C5)); // Å  // U+212B：长度单位“埃” console.log(String.fromCharCode(0x212B)); // Å  // U+004：大写拉丁字母 A  // U+030A：上面加个圆圈 console.log(String.fromCharCode(0x0041, 0x030A)); // Å</span></span><br></pre></td></tr></table></figure>
+
+<p>这3个字符互不相等。Unicode提供了4种规范化形式，可以将类似上面的字符规范化为一致的格式。</p>
+<p>这 4种规范化形式是：</p>
+<ul>
+<li>NFD（Normalization Form D）</li>
+<li>NFC（Normalization Form C）</li>
+<li>NFKD（Normalization Form KD）</li>
+<li>NFKC（Normalization Form KC）</li>
+</ul>
+<p>可以使用 normalize()方法对字符串应用上述规范化形式，使用时需要传入表示哪种形式的字符串：”NFD”、”NFC”、”NFKD”或”NFKC”。</p>
+<h5 id="字符串操作方法"><a href="#字符串操作方法" class="headerlink" title="字符串操作方法"></a>字符串操作方法</h5><p><strong>concat()</strong> 用于将一个或多个字符串拼接成一个新字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;hello &quot;</span>; <span class="keyword">let</span> result = stringValue.concat(<span class="string">&quot;world&quot;</span>); <span class="built_in">console</span>.log(result); <span class="comment">// &quot;hello world&quot; console.log(stringValue); // &quot;hello&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>stringValue 的值保持不变。(调用concat方法<strong>不改变</strong>原数组)</p>
+<p>提取子字符串的方法: <strong>slice()、substr()和 substring()</strong></p>
+<p>返回调用它们的字符串的一个<strong>子字符串</strong>，而且都接收<strong>一或两个参数</strong>。</p>
+<p>第一个参数表示子字符串开始的位置，第二个参数表示子字符串结束的位置。</p>
+<p>对 **slice()**和 <strong>substring()<strong>而言，第二个参数是提取结束的位置（即</strong>该位置之前的字符会被提取出来</strong>）。</p>
+<p>对 <strong>substr()<strong>而言，第二个参数表示返回的</strong>子字符串数量</strong>。 </p>
+<p>任何情况下，省略第二个参数都意味着提取到字符串末尾。</p>
+<p>与 <strong>concat()<strong>方法一样，</strong>slice()<strong>、</strong>substr()</strong> 和 <strong>substring()<strong>也</strong>不会修改调用它们的字符串</strong>，而只会返回提取到的原始新字符串值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;hello world&quot;</span>; <span class="built_in">console</span>.log(stringValue.slice(<span class="number">3</span>)); <span class="comment">// &quot;lo world&quot; console.log(stringValue.substring(3)); // &quot;lo world&quot; console.log(stringValue.substr(3)); // &quot;lo world&quot; console.log(stringValue.slice(3, 7)); // &quot;lo w&quot; console.log(stringValue.substring(3,7)); // &quot;lo w&quot; console.log(stringValue.substr(3, 7)); // &quot;lo worl&quot; </span></span><br></pre></td></tr></table></figure>
+
+<p>当某个参数是负值时，</p>
+<p>**slice()**方法将所有负值参数都当成字 符串长度加上负参数值。</p>
+<p>**substr()**方法将第一个负参数值当成字符串长度加上该值，将第二个负参数值转换为 0。 </p>
+<p>**substring()**方法会将所有负参数值都转换为 0。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;hello world&quot;</span>; <span class="built_in">console</span>.log(stringValue.slice(-<span class="number">3</span>)); <span class="comment">// &quot;rld&quot; console.log(stringValue.substring(-3)); // &quot;hello world&quot; console.log(stringValue.substr(-3)); // &quot;rld&quot; console.log(stringValue.slice(3, -4)); // &quot;lo w&quot; console.log(stringValue.substring(3, -4)); // &quot;hel&quot; console.log(stringValue.substr(3, -4)); // &quot;&quot; (empty string) </span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="字符串位置方法"><a href="#字符串位置方法" class="headerlink" title="字符串位置方法"></a>字符串位置方法</h5><p>用于在字符串中定位子字符串：**indexOf()**和 **lastIndexOf()**。</p>
+<p>这两个方法从字符串中搜索传入的字符串，并返回位置（如果没找到，则返回-1）。</p>
+<p>两者的区别在于，indexOf()方法从<strong>字符串开头</strong>开始查找子字符串，而 lastIndexOf()方法从<strong>字符串末尾</strong>开始查找子字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;hello world&quot;</span>; <span class="built_in">console</span>.log(stringValue.indexOf(<span class="string">&quot;o&quot;</span>)); <span class="comment">// 4 console.log(stringValue.lastIndexOf(&quot;o&quot;)); // 7 </span></span><br></pre></td></tr></table></figure>
+
+<p>这两个方法都可以接收可选的第二个参数，表示开始搜索的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;hello world&quot;</span>; <span class="built_in">console</span>.log(stringValue.indexOf(<span class="string">&quot;o&quot;</span>, <span class="number">6</span>)); <span class="comment">// 7 console.log(stringValue.lastIndexOf(&quot;o&quot;, 6)); // 4 </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>使用第二个参数并循环调用 indexOf()或 lastIndexOf()，就可以在字符串中找到所有的目标子字符串，如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit&quot;</span>; <span class="keyword">let</span> positions = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="keyword">let</span> pos = stringValue.indexOf(<span class="string">&quot;e&quot;</span>); <span class="keyword">while</span>(pos &gt; -<span class="number">1</span>) &#123;  positions.push(pos);  pos = stringValue.indexOf(<span class="string">&quot;e&quot;</span>, pos + <span class="number">1</span>); &#125; <span class="built_in">console</span>.log(positions); <span class="comment">// [3,24,32,35,52] </span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="字符串包含方法"><a href="#字符串包含方法" class="headerlink" title="字符串包含方法"></a>字符串包含方法</h5><p>ECMAScript 6 增加了 3 个用于判断字符串中是否包含另一个字符串的方法：</p>
+<p>**startsWith()**、 **endsWith()**和 **includes()**。</p>
+<p>这些方法都会从字符串中搜索传入的字符串，并返回一个表示是否包含的<strong>布尔值</strong>。</p>
+<p>区别：</p>
+<p>startsWith()检查开始于索引 0 的匹配项 （<strong>检查开头</strong>）</p>
+<p>endsWith()检查开始于索 引(string.length - substring.length)的匹配项  （<strong>检查结尾</strong>）</p>
+<p>includes()检查整个字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="string">&quot;foobarbaz&quot;</span>; <span class="built_in">console</span>.log(message.startsWith(<span class="string">&quot;foo&quot;</span>)); <span class="comment">// true console.log(message.startsWith(&quot;bar&quot;)); // false console.log(message.endsWith(&quot;baz&quot;)); // true console.log(message.endsWith(&quot;bar&quot;)); // false console.log(message.includes(&quot;bar&quot;)); // true console.log(message.includes(&quot;qux&quot;)); // false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>startsWith()和 includes()方法接收可选的第二个参数，表示开始搜索的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="string">&quot;foobarbaz&quot;</span>; <span class="built_in">console</span>.log(message.startsWith(<span class="string">&quot;foo&quot;</span>)); <span class="comment">// true console.log(message.startsWith(&quot;foo&quot;, 1)); // false console.log(message.includes(&quot;bar&quot;)); // true console.log(message.includes(&quot;bar&quot;, 4)); // false </span></span><br></pre></td></tr></table></figure>
+
+<p>endsWith()方法接收可选的第二个参数，表示应该当作字符串末尾的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="string">&quot;foobarbaz&quot;</span>; <span class="built_in">console</span>.log(message.endsWith(<span class="string">&quot;bar&quot;</span>)); <span class="comment">// false console.log(message.endsWith(&quot;bar&quot;, 6)); // true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="trim-方法"><a href="#trim-方法" class="headerlink" title="trim() 方法"></a>trim() 方法</h5><p>方法会创建字符串的一个副本，删除前、 后所有空格符，再返回结果。<strong>原始字符串不受影响</strong>。</p>
+<p>**trimLeft()**和 **trimRight()**方法分别用于从字符串开始和末尾清理空格符。</p>
+<h5 id="repeat-方法"><a href="#repeat-方法" class="headerlink" title="repeat() 方法"></a>repeat() 方法</h5><p>ECMAScript 在所有字符串上都提供了 repeat()方法。</p>
+<p>这个方法接收一个整数参数，表示要将字符串复制多少次，然后返回拼接所有副本后的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;na &quot;</span>; <span class="built_in">console</span>.log(stringValue.repeat(<span class="number">16</span>) + <span class="string">&quot;batman&quot;</span>); <span class="comment">// na na na na na na na na na na na na na na na na batman</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="padStart-和-padEnd-方法"><a href="#padStart-和-padEnd-方法" class="headerlink" title="padStart() 和 padEnd() 方法"></a>padStart() 和 padEnd() 方法</h5><p>padStart()和 padEnd()方法会复制字符串，如果小于指定长度，则在相应一边填充字符，直至 满足长度条件。</p>
+<p>这两个方法的第一个参数是<strong>长度</strong>，第二个参数是可选的<strong>填充字符串</strong>，默认为空格。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stringValue = <span class="string">&quot;foo&quot;</span>; <span class="built_in">console</span>.log(stringValue.padStart(<span class="number">6</span>)); <span class="comment">// &quot; foo&quot; console.log(stringValue.padStart(9, &quot;.&quot;)); // &quot;......foo&quot; console.log(stringValue.padEnd(6)); // &quot;foo &quot; console.log(stringValue.padEnd(9, &quot;.&quot;)); // &quot;foo......&quot; </span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="字符串大小写转换"><a href="#字符串大小写转换" class="headerlink" title="字符串大小写转换"></a>字符串大小写转换</h5><p>toLowerCase()、toLocaleLowerCase()、 toUpperCase()和toLocaleUpperCase()。</p>
+<p>toLocaleLowerCase()和 toLocaleUpperCase()方法旨在基于<strong>特定地区</strong>实现。</p>
+<p>在很多地区，地区特定的方法与通用的方法是一样的。但在少数语言中（如土耳其语）， Unicode 大小写转换需应用特殊规则，要使用地区特定的方法才能实现正确转换。</p>
+<h5 id="字符串模式匹配方法"><a href="#字符串模式匹配方法" class="headerlink" title="字符串模式匹配方法"></a>字符串模式匹配方法</h5>  
     </div>
     <div class="article-info article-info-index">
         
@@ -573,7 +688,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/29/HTML-css3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/06/js%E7%BA%A2%E7%9A%AE%E4%B9%A6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -586,15 +701,20 @@
  
 <nav id="article-nav">
   
-    <a href="/2021/11/19/Node-js/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/10/26/Promise/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Node.js
+          Promise
         
       </div>
     </a>
   
+  
+    <a href="/2021/05/26/js/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
   <aside class="wrap-side-operation">
@@ -751,27 +871,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://www.xinxinlighting.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Yiyang Sun</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://blog.syy11.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Yuxin Xie</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
             </li>
           
         </ul>
@@ -782,7 +902,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">艾鑫&lt;br&gt;&lt;br&gt;UESTCer</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">艾鑫&lt;br&gt;UESTCer&lt;br&gt;&lt;br&gt;一个前端爱好者</div>
   	  	
     	</section>
     

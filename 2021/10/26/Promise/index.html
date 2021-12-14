@@ -11,7 +11,7 @@
   <meta name="description" content="Promise是什么抽象：Promise是JS中进行异步编程的新的解决方案 具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Promise">
-<meta property="og:url" content="http://example.com/2021/12/06/Promise/index.html">
+<meta property="og:url" content="http://example.com/2021/10/26/Promise/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
 <meta property="og:description" content="Promise是什么抽象：Promise是JS中进行异步编程的新的解决方案 具体：Promise是一个构造函数，Promise对象用来封装一个异步操作可以获取其结果">
 <meta property="og:locale" content="en_US">
@@ -20,8 +20,8 @@
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211210133004122.png">
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211210133139287.png">
 <meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211210134231956.png">
-<meta property="article:published_time" content="2021-12-06T11:23:57.000Z">
-<meta property="article:modified_time" content="2021-12-14T07:23:45.077Z">
+<meta property="article:published_time" content="2021-10-26T11:23:57.000Z">
+<meta property="article:modified_time" content="2021-12-14T07:55:18.405Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211206200603820.png">
@@ -35,7 +35,7 @@
   <style type="text/css">
   
     #container.show {
-      background: skyblue;
+      background: linear-gradient(200deg, #99ccff, #dfdfdf);
     }
   </style>
   
@@ -51,7 +51,7 @@
       
 <div
   class="overlay"
-  style="background: #4d4d4d"
+  style="background: #cce5ff"
 ></div>
 <div class="intrude-less">
   <header id="header" class="inner">
@@ -69,8 +69,6 @@
       <ul>
         
         <li><a href="/">主页</a></li>
-        
-        <li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
         
       </ul>
     </nav>
@@ -199,7 +197,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #cce5ff"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -213,8 +211,6 @@
 			</hgroup>
 			
 			
-			
-				
 			
 				
 			
@@ -236,9 +232,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -271,8 +265,8 @@
       Promise
     </h1>
   
-  <a href="/2021/12/06/Promise/" class="archive-article-date">
-  	<time datetime="2021-12-06T11:23:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-06</time>
+  <a href="/2021/10/26/Promise/" class="archive-article-date">
+  	<time datetime="2021-10-26T11:23:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-26</time>
 </a> 
     </header>
     
@@ -479,7 +473,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/12/06/Promise/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/26/Promise/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -492,9 +486,18 @@
  
 <nav id="article-nav">
   
+    <a href="/2021/11/19/Node-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Node.js
+        
+      </div>
+    </a>
   
-    <a href="/2021/11/19/Node-js/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Node.js</div>
+  
+    <a href="/2021/10/06/js%E7%BA%A2%E7%9A%AE%E4%B9%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js红皮书</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -653,27 +656,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://www.xinxinlighting.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Yiyang Sun</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://blog.syy11.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Yuxin Xie</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
             </li>
           
         </ul>
@@ -684,7 +687,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">艾鑫&lt;br&gt;&lt;br&gt;UESTCer</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">艾鑫&lt;br&gt;UESTCer&lt;br&gt;&lt;br&gt;一个前端爱好者</div>
   	  	
     	</section>
     

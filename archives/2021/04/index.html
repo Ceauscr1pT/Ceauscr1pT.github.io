@@ -6,21 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Node.js | Aixin&#39;s Blog</title>
+  <title>Archives: 2021/4 | Aixin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Node.js">
-<meta property="og:url" content="http://example.com/2021/11/19/Node-js/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Aixin&#39;s Blog">
+<meta property="og:url" content="http://example.com/archives/2021/04/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
-<meta property="og:description" content="Node.js是一个能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211123154214713.png">
-<meta property="article:published_time" content="2021-11-19T10:06:45.000Z">
-<meta property="article:modified_time" content="2021-12-02T13:18:02.839Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20211123154214713.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -243,345 +237,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article
-  id="post-Node-js"
-  class="
-    article article-type-post
-    
-  "
-  itemscope
-  itemprop="blogPost"
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
+            
   
-    <h1 class="article-title" itemprop="name">
-      Node.js
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/04/10/HTML-css3/" class="archive-article-date">
+  	<time datetime="2021-04-10T08:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-10</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/04/10/HTML-css3/">HTML+css3</a>
     </h1>
   
-  <a href="/2021/11/19/Node-js/" class="archive-article-date">
-  	<time datetime="2021-11-19T10:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-19</time>
-</a> 
-    </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-       <p>Node.js是一个能够在<strong>服务器端</strong>运行JavaScript的开放源代码、跨平台JavaScript运行环境。</p>
-<span id="more"></span>
 
-<h3 id="命令行窗口常用指令"><a href="#命令行窗口常用指令" class="headerlink" title="命令行窗口常用指令"></a><strong>命令行窗口常用指令</strong></h3><p>dir   列出当前目录下的所有文件</p>
-<p>cd   进入到指定的目录下</p>
-<p>md   创建一个文件夹</p>
-<p>rd   删除一个文件夹</p>
-<p>.    表示当前目录</p>
-<p>..   表示上一级目录</p>
-<p>环境变量（<strong>windows系统</strong>中的变量）</p>
-<p>如：path</p>
-<p>​              C: \work\jdk\jdk1.7.0_75/bin;</p>
-<p>原理：当我们在命令行窗口打开一个文件，或调用一个程序时，系统会首先在当前目录下寻找文件程序，如果找到了则直接打开；如果没有找到则会依次到环境变量path的路径中寻找。（类似<strong>作用域链</strong>）</p>
-<p>作用：将一些<strong>经常需要访问</strong>的程序和文件的路径添加到path中，这样我们就可以在<strong>任意位置</strong>来访问这些文件和程序。</p>
-<h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>进程：</p>
-<ul>
-<li>进程负责为程序的运行提供必备的环境</li>
-<li>程序的一次执行, 它占有一片独有的内存空间</li>
-</ul>
-<p>线程：</p>
-<ul>
-<li><p>线程负责执行进程中的程序</p>
-</li>
-<li><p>是进程内的一个独立执行单元</p>
-</li>
-<li><p>是程序执行的一个完整流程</p>
-</li>
-<li><p>是CPU的最小的调度单元</p>
-</li>
-</ul>
-<p>JS是<strong>单线程</strong></p>
-<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Node.js是一个能够在<strong>服务器端</strong>运行JavaScript的开放源代码、跨平台JavaScript运行环境。使用Chrome V8引擎。</p>
-<p>Node.js诞生目的：创建一个<strong>高性能</strong>的Web服务器</p>
-<p>客户端 &lt;-&gt; 服务器 &lt;-&gt; 数据库</p>
-<p>客户端和服务器的请求和响应性能可以通过代码改善，但服务器和数据库之间的I/O数据交互设计<strong>读写磁盘，速度难以改变</strong>。Node.js相当于在服务器上创建一个超级单线程，在后台拥有一个<strong>I/O线程池</strong>，防止阻塞。</p>
-<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>Node.js可以解析JS代码（没有浏览器安全级别的限制）提供很多系统级别的API，如：</p>
-<ul>
-<li>文件读写 (File System)</li>
-<li>进程的管理 (Process)</li>
-<li>网路通信 (HTTP/HTTPS)</li>
-</ul>
-<h2 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h2><p>该规范的提出，是为了弥补<strong>JavaScript模块化没有标准</strong>的缺陷</p>
-<p>在Node中，一个<strong>js文件</strong>就是一个<strong>模块</strong>，通过<strong>require()</strong> 来引入外部的模块，require() 可以传递<strong>一个文件的路径</strong>作为参数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mode = <span class="built_in">require</span>(<span class="string">&quot;./...&quot;</span>);</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<p>在Node中，每一个js文件中的js代码都是独立运行在<strong>一个函数</strong>中，而不是全局作用域，所以一个模块中的变量和函数在其他模块中无法访问</p>
-<p>通过将需要暴露给外部的变量或方法设置为exports的属性即可</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.x = <span class="string">&quot;hahahah&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="全局对象-global"><a href="#全局对象-global" class="headerlink" title="全局对象 global"></a>全局对象 global</h3><p>node中有一个全局对象 global ，它的作用和网页中的window类似</p>
-<p>在全局中创建的变量都会作为global的属性和方法保存</p>
-<p>例如：在一个js文件中不声明定义一个变量，就会作为global 的属性保存</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">global</span>.a);  <span class="comment">//10</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>arguments:  伪数组对象，封装当前函数的实参</p>
-<p>callee：函数中的属性，保存当前执行的函数对象</p>
-<h3 id="函数包装模块"><a href="#函数包装模块" class="headerlink" title="函数包装模块"></a>函数包装模块</h3><p>node在执行模块中的代码时，会将当前js文件中的代码包装在如下函数中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"><span class="built_in">exports</span>, <span class="built_in">require</span>, <span class="built_in">module</span>, __filename, __dirname</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>exports：对象，将变量和函数暴露到外部</p>
-<p>require：函数，用来引入外部的模块</p>
-<p>module：代表当前模块本身，exports是module 的属性</p>
-<p>—filename：当前模块的完整路径</p>
-<p>—dirname：当前模块所在文件夹的完整路径</p>
-<h3 id="exports-和-module-exports"><a href="#exports-和-module-exports" class="headerlink" title="exports 和 module.exports"></a>exports 和 module.exports</h3><p>exports：只能用 “ . “ 的方式向外暴露外部变量</p>
-<p>module.exports：可以用 “ . “ 和直接赋值（”=”）的方式暴露</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span> = &#123;...&#125;  <span class="comment">//false</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;...&#125;  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>CommonJS的包规范可以将一组相关的模块组合到一起，形成一组完整的工具</p>
-<p>一个js文件就是一个模块，包含多个js文件的文件夹就是包</p>
-<p>CommonJS的包规范由 <strong>包结构</strong> 和 <strong>包描述文件</strong> 组成</p>
-<p>包结构：用于组织包的各种文件</p>
-<p>包实际就是一个压缩文件，解压后还原为目录，符合规范的目录，应包含如下文件：</p>
-<p><strong>package.json    描述文件  （必备）</strong></p>
-<p>bin    可执行二进制文件</p>
-<p>lib    js代码</p>
-<p>doc    文档</p>
-<p>test    单元测试</p>
-<p>包描述文件：描述包的相关信息，以供外部读取分析</p>
-<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>NPM（Node Package Manager）帮助node完成第三方模块的发布、安装和依赖</p>
-<h3 id="NPM的命令"><a href="#NPM的命令" class="headerlink" title="NPM的命令"></a>NPM的命令</h3><p>npm -v   查看npm的版本</p>
-<p>npm version   查看所有模块的版本</p>
-<p>npm search 包名    搜索包</p>
-<p>npm install / i 包名    安装包</p>
-<p>npm remove / r 包名    删除包</p>
-<p>npm install 包名 –save    <strong>安装包并添加到依赖中（dependencies）</strong></p>
-<p>npm install    下载当前项目所依赖的包</p>
-<p>npm install 包名 -g    全局安装包（一般为计算机使用的工具）</p>
-<h3 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h3><p>cnpm下载命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org1</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="npm搜索包的流程"><a href="#npm搜索包的流程" class="headerlink" title="npm搜索包的流程"></a>npm搜索包的流程</h3><p>通过npm下载的包在 <strong>node_module</strong> 文件夹中</p>
-<p>通过npm下载的包，直接通过<strong>包名</strong>引入即可</p>
-<p>node在使用模块名字引入模块时，会首先在当前目录的node_module中寻找，无则找上级node_module文件，直到找到磁盘根目录</p>
-<h2 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h2><p>Buffer 的结构和数组相似，操作方法也和数组类似</p>
-<p>buffer专门用来存储二进制数据</p>
-<p>使用buffer不需要引入模块，可以直接使用</p>
-<p>buffer中的二进制数据以16进制的形式显示</p>
-<p>buffer中每一个元素范围为 00 - ff</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buf = Buffer.from(str);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(buf.length); <span class="comment">//占用内存的大小</span></span><br><span class="line"><span class="built_in">console</span>.log(str.length); <span class="comment">//字符串的长度(汉字3字节)</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>创建指定大小的Buffer：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buf = Buffer.alloc(<span class="number">10</span>); <span class="comment">//10字节的Buffer</span></span><br></pre></td></tr></table></figure>
-
-<p>注意：不要动态往Buffer中添加元素，后添加的元素在内存中不是连续存放的空间，不容易管理</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buf = Buffer.allocUnsafe(<span class="number">10</span>); </span><br></pre></td></tr></table></figure>
-
-<p>和 alloc() 的区别: </p>
-<p>  alloc不仅分配内存空间，同时会将该空间数据清零</p>
-<p>  allocUnsafe只分配内存空间，故buffer中可能含有敏感数据</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buf = Buffer.from(str);</span><br><span class="line">buf.toString() <span class="comment">//将缓冲区的数据转换为字符串</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><p>文件系统简单来说就是通过Node来操作系统中的文件</p>
-<p>使用文件系统，需要先引入fs模块，fs是核心模块，直接引入不需要下载</p>
-<p><strong>js中，对文件能读就能写！！！</strong></p>
-<h3 id="同步文件写入"><a href="#同步文件写入" class="headerlink" title="同步文件写入"></a>同步文件写入</h3><p>1.打开文件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.openSync(path, flags[, mode])</span><br></pre></td></tr></table></figure>
-
-<p>path：打开文件的路径</p>
-<p>flags：打开文件要做的操作的类型</p>
-<ul>
-<li>r  只读</li>
-<li>w  可写</li>
-</ul>
-<p>mode：设置文件的操作权限，一般不写</p>
-<p>2.向文件中写入内容</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.writeSync(fd, string[, position[, encoding]])</span><br></pre></td></tr></table></figure>
-
-<p>fd：文件的描述符</p>
-<p>string：写入的内容</p>
-<p>position：写入的起始位置</p>
-<p>encoding：写入的编码，默认为utf-8</p>
-<p>3.保存并关闭文件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.closeSync(fd)</span><br></pre></td></tr></table></figure>
-
-<p>fd：要关闭的文件的描述符</p>
-<p>例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> fd = fs.openSync(<span class="string">&quot;hello.txt&quot;</span>, <span class="string">&quot;w&quot;</span>);</span><br><span class="line">fs.writeSync(fd, <span class="string">&quot;hahahahaha&quot;</span>, <span class="number">20</span>);</span><br><span class="line">fs.closeSync(fd);</span><br></pre></td></tr></table></figure>
-
-<p>缺点：不能处理异常，一旦有异常，会导致整个程序无法向下进行</p>
-<h3 id="异步文件写入"><a href="#异步文件写入" class="headerlink" title="异步文件写入"></a>异步文件写入</h3><p>1.打开文件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.open(path, flags[, mode], callback)</span><br></pre></td></tr></table></figure>
-
-<p>异步调用的方法，结果通过回调函数的参数来返回</p>
-<p>回调函数的两个参数：</p>
-<p>err：错误<strong>对象</strong>，如果没有错误返回null</p>
-<p>fd：文件的描述符</p>
-<p>2.向文件中写入内容</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.write(fd, string[, position[, encoding]], callback)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.关闭文件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.close(fd, callback)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line">fs.open(<span class="string">&quot;hello.txt&quot;</span>, <span class="string">&quot;w&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, fd</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">    fs.write(fd, <span class="string">&quot;hahahahahaha&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;写入成功&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      fs.close(fd, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&quot;文件已关闭&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>特点：性能优于同步，不影响程序执行，在整个程序都完成后完成回调函数的异步操作</p>
-<h3 id="简单文件写入"><a href="#简单文件写入" class="headerlink" title="简单文件写入"></a>简单文件写入</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fs.writeFile(file, data[, options], callback)</span><br><span class="line">fs.writeFile(file, data[, options])</span><br></pre></td></tr></table></figure>
-
-<p>file：文件路径</p>
-<p>data：写入的数据</p>
-<p>options：选项，对写入进行设置</p>
-<ul>
-<li>encoding: 写入的编码，默认为utf-8</li>
-<li>mode：文件权限，默认0o666</li>
-<li>flag：文件操作形式，默认”w”</li>
-</ul>
-<img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20211123154214713.png" alt="image-20211123154214713" style="zoom: 67%;" />
-
-<p>callback：当写入完成后执行的函数</p>
-<h3 id="流式文件的写入"><a href="#流式文件的写入" class="headerlink" title="流式文件的写入"></a>流式文件的写入</h3><p>同步、异步、简单文件的写入都不适合大文件的写入，性能较差，容易导致内存</p>
-<p>1.创建一个可写流</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fs.createWriteStream(path[, options])</span><br></pre></td></tr></table></figure>
-
-<p>path：文件路径</p>
-<p>options：配置的参数</p>
-<p>2.监听流的打开和关闭</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ws.once(<span class="string">&quot;open&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line">ws.once(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.向文件中写入内容（流形式）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws.write(string); <span class="comment">//ws为可写流描述符</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>4.关闭流</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ws.end(); <span class="comment">//关闭流的传输通道的入口</span></span><br><span class="line">ws.close(); <span class="comment">//关闭流的传输通道的出口</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>例：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = fs.createWriteStream(<span class="string">&quot;hello.txt&quot;</span>);</span><br><span class="line"></span><br><span class="line">ws.once(<span class="string">&quot;open&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;流打开了&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">ws.once(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;流关闭了&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ws.write(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">ws.write(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">ws.write(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">ws.write(<span class="string">&quot;4&quot;</span>);</span><br><span class="line"></span><br><span class="line">ws.end();  <span class="comment">//关闭入口</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="简单文件读取"><a href="#简单文件读取" class="headerlink" title="简单文件读取"></a>简单文件读取</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(path[, options], callback)</span><br><span class="line">fs.readFileSync(path[, options])</span><br></pre></td></tr></table></figure>
-
-<p>path：文件路径</p>
-<p>options：读取选项</p>
-<p>callback：回调函数，读取到内容后返回（err，data）</p>
-<ul>
-<li>err：错误对象</li>
-<li>data：读取到的数据</li>
-</ul>
-<p>例：下列代码可以完成图片复制</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line">fs.readFile(<span class="string">&quot;1.jpg&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">        fs.writeFile(<span class="string">&quot;2.jpg&quot;</span>, data, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">&quot;文件写入成功&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="流式文件读取"><a href="#流式文件读取" class="headerlink" title="流式文件读取"></a>流式文件读取</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs =<span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> rs = fs.createReadStream(<span class="string">&quot;1.jpg&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ws = fs.createWriteStream(<span class="string">&quot;2.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">rs.once(<span class="string">&quot;open&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;可读流打开&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">ws.once(<span class="string">&quot;open&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;可写流打开&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">rs.once(<span class="string">&quot;close&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;可读流关闭&quot;</span>);</span><br><span class="line">    ws.end(); <span class="comment">//数据读取完毕，关闭可写流</span></span><br><span class="line">&#125;);</span><br><span class="line">rs.once(<span class="string">&quot;open&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;可读流打开&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果要读取一个可读流中的数据，必须要为可读流绑定一个data时间，data事件绑定完毕，会自动开始读取数据</span></span><br><span class="line">rs.on(<span class="string">&quot;data&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ws.write(data);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>上述代码与下列代码等效：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs =<span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> rs = fs.createReadStream(<span class="string">&quot;1.jpg&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ws = fs.createWriteStream(<span class="string">&quot;2.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">rs.pipe(ws);</span><br></pre></td></tr></table></figure>
-
-  
-    </div>
-    <div class="article-info article-info-index">
-        
-   
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/11/19/Node-js/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
- 
-<nav id="article-nav">
   
   
-    <a href="/2021/10/26/Promise/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Promise</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
-  <aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>       
+
+    
+
 
           </div>
         </div>
@@ -604,8 +303,8 @@
   var yiliaConfig = {
   	mathjax: false,
   	isHome: false,
-  	isPost: true,
-  	isArchive: false,
+  	isPost: false,
+  	isArchive: true,
   	isTag: false,
   	isCategory: false,
   	open_in_new: false,
