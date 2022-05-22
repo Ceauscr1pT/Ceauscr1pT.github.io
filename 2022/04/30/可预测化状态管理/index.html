@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="Aixin&#39;s Blog">
 <meta property="og:description" content="reduxredux是Javascript状态容器，提供可预测化的状态管理">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/2471723-20210720223003182-771237366.png">
-<meta property="og:image" content="d:/blog/source/_posts/可预测化状态管理/image-20220420114958820.png">
-<meta property="og:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/image-20220420175720094.png">
+<meta property="og:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/2471723-20210720223003182-771237366.png">
+<meta property="og:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/image-20220420114958820.png">
+<meta property="og:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/image-20220420175720094.png">
 <meta property="article:published_time" content="2022-04-30T13:27:24.000Z">
-<meta property="article:modified_time" content="2022-05-22T14:00:46.256Z">
+<meta property="article:modified_time" content="2022-05-22T14:20:37.801Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/2471723-20210720223003182-771237366.png">
+<meta name="twitter:image" content="http://example.com/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/2471723-20210720223003182-771237366.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -288,7 +288,7 @@
 </ol>
 <p><strong>reducer是一个纯函数，描述了action如何改变状态树。</strong></p>
 <p>纯函数是指一个函数的返回结果只依赖其参数，并且执行过程中没有副作用。只依赖参数是说函数返回值不受外部值影响，只取决于传入的参数；副作用则是指修改外部变量、调用DOM API修改页面，发送Ajax请求、调用window.reload刷新浏览器和console.log等等操作。</p>
-<h3 id="redux的使用"><a href="#redux的使用" class="headerlink" title="redux的使用"></a>redux的使用</h3><p><img src="./%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/2471723-20210720223003182-771237366.png"></p>
+<h3 id="redux的使用"><a href="#redux的使用" class="headerlink" title="redux的使用"></a>redux的使用</h3><p><img src="2471723-20210720223003182-771237366.png"></p>
 <ol>
 <li>通过createStore创建一个store</li>
 </ol>
@@ -321,7 +321,7 @@
 
 <p>此外在处理异步数据流时，我们可以在创建同步action函数的基础上，使用redux-saga、redux-thunk等中间件将网络请求结合起来。</p>
 <p>react-redux实现了对react和redux的结合，在原有基础上，提出了容器组件和展示组件(UI组件)的概念。另一个比较大的改变就是使用<strong>connect()<strong>方法实现了从redux state树中以props的形式把数据提供给要渲染的组件，简单来说就是实现了</strong>state</strong>和<strong>view</strong>的关联。另外在connect()前，需要定义mapStateToProps和mapDispatchToProps来规定state和dispatch()需要展示到props里的映射。</p>
-<p><img src="D:/blog/source/_posts/可预测化状态管理/image-20220420114958820.png"></p>
+<p><img src="image-20220420114958820.png"></p>
 <h3 id="全局状态管理的劣势"><a href="#全局状态管理的劣势" class="headerlink" title="全局状态管理的劣势"></a>全局状态管理的劣势</h3><p>不论是redux还是基于redux封装的dva，共同的一点都是为了能够让多个组件共享、订阅、改变state，形成一个state—&gt;view的网结构，在中间层去做state的处理。但只有在如下情况才适合用到全局状态管理：</p>
 <ol>
 <li>中间层的数据处理代码可以复用</li>
@@ -336,7 +336,7 @@
 <li><strong>插件机制。</strong>比如 dva-loading 可以自动处理 loading 状态，不用一遍遍地写 showLoading 和 hideLoading。</li>
 <li><strong>支持HMR。</strong>HMR全称为Hot Module Replacement，意为模块热替换。在webpack中使用HMR，能够在应用运行更新时，无需重新npm run dev或者npm start刷新页面，便能够更新更改的模块，这极大改善了前端开发工作。目前vue-cli、create-react-app、create-umi-app等都自动配置好了热更新功能。dva基于babel-plugin-dva-hmr插件实现了components、routes和models的HMR，不需要手动去进行webpack热更新配置了。</li>
 </ul>
-<h3 id="Dva的使用"><a href="#Dva的使用" class="headerlink" title="Dva的使用"></a>Dva的使用</h3><p><img src="./%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/image-20220420175720094.png"></p>
+<h3 id="Dva的使用"><a href="#Dva的使用" class="headerlink" title="Dva的使用"></a>Dva的使用</h3><p><img src="image-20220420175720094.png"></p>
 <ol>
 <li><strong>app = dva(opts)</strong>  创建应用，返回dva实例。(详见DvaJS官网)</li>
 <li><strong>app.use(hooks)</strong>  配置hooks或者注册插件。(详见DvaJS官网)</li>
@@ -435,8 +435,8 @@
     </a>
   
   
-    <a href="/2022/04/12/%E5%BE%AE%E5%89%8D%E7%AB%AF/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微前端</div>
+    <a href="/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%862/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">可预测化状态管理</div>
       <i class="icon-circle-right"></i>
     </a>
   
