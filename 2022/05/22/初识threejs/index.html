@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Aixin&#39;s Blog">
 <meta property="og:description" content="threejsthreejs官网称其为“JavaScript 3D library”。threejs是基于WebGL封装的库，而WebGL又起源于openGL。openGL是一个跨平台的2D&#x2F;3D绘图标准，WebGL则是openGL在浏览器这个分支的一个实现。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114903847.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/%E5%88%9D%E8%AF%86threejs/image-20220425114903847.png">
 <meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114950009.png">
 <meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425115014252.png">
 <meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220425150507271.png">
@@ -29,10 +29,10 @@
 <meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427164552537.png">
 <meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427173555975.png">
 <meta property="article:published_time" content="2022-05-22T13:30:59.000Z">
-<meta property="article:modified_time" content="2022-05-22T14:45:29.480Z">
+<meta property="article:modified_time" content="2022-05-22T15:11:22.750Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114903847.png">
+<meta name="twitter:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/%E5%88%9D%E8%AF%86threejs/image-20220425114903847.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -289,7 +289,7 @@
 <h5 id="OrthographicCamera-正交摄像机"><a href="#OrthographicCamera-正交摄像机" class="headerlink" title="OrthographicCamera(正交摄像机)"></a>OrthographicCamera(正交摄像机)</h5><p>该投影模式下，改变相机和物体的距离，始终不会改变物体的大小。适用于渲染2D场景和UI元素。</p>
 <h4 id="渲染器（render）"><a href="#渲染器（render）" class="headerlink" title="渲染器（render）"></a>渲染器（render）</h4><p>将 camera 在 scene 里看到的内容渲染/绘制到canvas上。</p>
 <h4 id="几何体（geometry）"><a href="#几何体（geometry）" class="headerlink" title="几何体（geometry）"></a>几何体（geometry）</h4><p>3D物体都是通过点成线，线成面，面成几何体得来的。threejs中常见的几何体有BoxGeometry(立方体)、CircleGeometry(圆形体)、CylinderGeometry(圆柱体)、SphereGeometry(球体) 和 WireframeGeometry(网格几何体)等。这些几何体基于三点确定一个面的原理，用最简洁且易控制的方式来呈现。其中WireframeGeometry可以添加在另一个实几何体上，对其以线框的形式进行查看。</p>
-<p><img src=".%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114903847.png" alt="image-20220425114903847"></p>
+<p><img src="./%E5%88%9D%E8%AF%86threejs/image-20220425114903847.png" alt="image-20220425114903847"></p>
 <p><img src=".%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114950009.png" alt="image-20220425114950009"></p>
 <p><img src=".%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425115014252.png" alt="image-20220425115014252"></p>
 <p>每个几何体可以通过controls面板来动态控制浏览器中所看到几何体的形状大小等属性。以球体为例，我们通过调节widthSegments(水平分段数) 和 heightSegment(垂直分段数) 来控制点和面的数量，以此让球达到更圆的效果。</p>
