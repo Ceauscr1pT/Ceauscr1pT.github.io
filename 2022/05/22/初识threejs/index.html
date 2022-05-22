@@ -15,24 +15,24 @@
 <meta property="og:site_name" content="Aixin&#39;s Blog">
 <meta property="og:description" content="threejsthreejs官网称其为“JavaScript 3D library”。threejs是基于WebGL封装的库，而WebGL又起源于openGL。openGL是一个跨平台的2D&#x2F;3D绘图标准，WebGL则是openGL在浏览器这个分支的一个实现。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="d:/blog/source_posts/初始threejs.assets/image-20220425114903847.png">
-<meta property="og:image" content="d:/blog/source_posts/初始threejs.assets/image-20220425114950009.png">
-<meta property="og:image" content="d:/blog/source_posts/初始threejs.assets/image-20220425115014252.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220425150507271.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220425151541586.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220425152806520.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220425153115615.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220425153911844.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220427162944429.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220427163532571.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220427163614038.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220427164552537.png">
-<meta property="og:image" content="d:/blog/source/_posts/初始threejs.assets/image-20220427173555975.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114903847.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114950009.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425115014252.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220425150507271.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220425151541586.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220425152806520.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220425153115615.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220425153911844.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427162944429.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427163532571.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427163614038.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427164552537.png">
+<meta property="og:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/初识threejs/image-20220427173555975.png">
 <meta property="article:published_time" content="2022-05-22T13:30:59.000Z">
-<meta property="article:modified_time" content="2022-05-22T13:33:15.033Z">
+<meta property="article:modified_time" content="2022-05-22T14:45:29.480Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:/blog/source_posts/初始threejs.assets/image-20220425114903847.png">
+<meta name="twitter:image" content="http://example.com/2022/05/22/%E5%88%9D%E8%AF%86threejs/.%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114903847.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -289,49 +289,49 @@
 <h5 id="OrthographicCamera-正交摄像机"><a href="#OrthographicCamera-正交摄像机" class="headerlink" title="OrthographicCamera(正交摄像机)"></a>OrthographicCamera(正交摄像机)</h5><p>该投影模式下，改变相机和物体的距离，始终不会改变物体的大小。适用于渲染2D场景和UI元素。</p>
 <h4 id="渲染器（render）"><a href="#渲染器（render）" class="headerlink" title="渲染器（render）"></a>渲染器（render）</h4><p>将 camera 在 scene 里看到的内容渲染/绘制到canvas上。</p>
 <h4 id="几何体（geometry）"><a href="#几何体（geometry）" class="headerlink" title="几何体（geometry）"></a>几何体（geometry）</h4><p>3D物体都是通过点成线，线成面，面成几何体得来的。threejs中常见的几何体有BoxGeometry(立方体)、CircleGeometry(圆形体)、CylinderGeometry(圆柱体)、SphereGeometry(球体) 和 WireframeGeometry(网格几何体)等。这些几何体基于三点确定一个面的原理，用最简洁且易控制的方式来呈现。其中WireframeGeometry可以添加在另一个实几何体上，对其以线框的形式进行查看。</p>
-<p><img src="D:\blog\source_posts\初始threejs.assets\image-20220425114903847.png" alt="image-20220425114903847"></p>
-<p><img src="D:\blog\source_posts\初始threejs.assets\image-20220425114950009.png" alt="image-20220425114950009"></p>
-<p><img src="D:\blog\source_posts\初始threejs.assets\image-20220425115014252.png" alt="image-20220425115014252"></p>
+<p><img src=".%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114903847.png" alt="image-20220425114903847"></p>
+<p><img src=".%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425114950009.png" alt="image-20220425114950009"></p>
+<p><img src=".%5C%E5%88%9D%E8%AF%86threejs%5Cimage-20220425115014252.png" alt="image-20220425115014252"></p>
 <p>每个几何体可以通过controls面板来动态控制浏览器中所看到几何体的形状大小等属性。以球体为例，我们通过调节widthSegments(水平分段数) 和 heightSegment(垂直分段数) 来控制点和面的数量，以此让球达到更圆的效果。</p>
 <h4 id="灯光（light）"><a href="#灯光（light）" class="headerlink" title="灯光（light）"></a>灯光（light）</h4><p>光源基类。所有其他光类型都继承该类的属性和方法。常见光类型有AmbientLight(环境光)、DirectionLight(平行光)、PointLight(点光源)、SpotLight(聚光灯)，以MeshLambert网格材质来看下各种光的不同之处。</p>
 <h5 id="AmbientLight-环境光"><a href="#AmbientLight-环境光" class="headerlink" title="AmbientLight(环境光)"></a>AmbientLight(环境光)</h5><p>3D引擎的默认光类型为环境光，光会均匀照亮场景中的所有物体。由于其无方向，不能用来投影阴影。</p>
 <p>注：默认环境光为：0x000000(黑色)，大多情况需模拟白光</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220425150507271.png" alt="image-20220425150507271" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220425150507271.png" alt="image-20220425150507271" style="zoom:50%;" />
 
 <h5 id="DirectionLight-平行光"><a href="#DirectionLight-平行光" class="headerlink" title="DirectionLight(平行光)"></a>DirectionLight(平行光)</h5><p>平行光指沿着特定方向发射的光。常常用来模拟日光效果。由于太阳离我们足够远，我们可以近似认为太阳的光线是平行的。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220425151541586.png" alt="image-20220425151541586" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220425151541586.png" alt="image-20220425151541586" style="zoom:50%;" />
 
 <p>可以看到，平行光下的物体表面受光不再均匀，更加有立体感和质感了。同时，平行光在近处同位置的地方和点光源的效果是相似的，但是点光源受距离影响，而平行光没有此限制。</p>
 <h5 id="PointLight-点光源"><a href="#PointLight-点光源" class="headerlink" title="PointLight(点光源)"></a>PointLight(点光源)</h5><p>从一个点向各方向发出的光源。用来模拟灯泡发出的光。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220425152806520.png" alt="image-20220425152806520" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220425152806520.png" alt="image-20220425152806520" style="zoom:50%;" />
 
 <p>此图和上图都是在camera坐标(0,0,5)，光源坐标(0,0,5)条件下的效果图，可以说几乎无差别。再更改光源的坐标为(0,0,80)，发现平行光无变化，而点光源下的物体明显变暗了。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220425153115615.png" alt="image-20220425153115615" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220425153115615.png" alt="image-20220425153115615" style="zoom:50%;" />
 
 <p>我认为在各种光类型的照射范围内，环境光可以看作光在三维上的均匀；平行光可以看作二维上的均匀，即线均匀；点光源可以看作一维上的均匀，即点均匀。</p>
 <h5 id="SpotLight-聚光灯"><a href="#SpotLight-聚光灯" class="headerlink" title="SpotLight(聚光灯)"></a>SpotLight(聚光灯)</h5><p>光线从一个点沿着一个方向射出，随着光线照射变远，光线圆锥体的尺寸也逐渐增大。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220425153911844.png" alt="image-20220425153911844" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220425153911844.png" alt="image-20220425153911844" style="zoom:50%;" />
 
 <p>经过几种光源的对比之后，我认为聚光灯的立体感和真实感是最好的，图上可能看不出来。这一部分原因得益于其可以投射阴影。</p>
 <h4 id="纹理贴图（Texture）"><a href="#纹理贴图（Texture）" class="headerlink" title="纹理贴图（Texture）"></a>纹理贴图（Texture）</h4><p>作用在物体表面的一种物体修饰，也可作为反射、折射贴图。</p>
 <h4 id="材质（material）"><a href="#材质（material）" class="headerlink" title="材质（material）"></a>材质（material）</h4><p>材质描述了对象的外观，定义方式与渲染器无关。需要更换渲染器无需重写材质。常见的材质有MeshBasicMaterial(基础网格材质)、MeshLambertMaterial(Lambert网格材质)、MeshPhongMaterial(Phong网格材质)、MeshStandardMaterial(标准网格材质)等。</p>
 <h5 id="MeshBasicMaterial-基础网格材质"><a href="#MeshBasicMaterial-基础网格材质" class="headerlink" title="MeshBasicMaterial(基础网格材质)"></a>MeshBasicMaterial(基础网格材质)</h5><p>这种材质不受光照影响，呈现的颜色即为其着色，即使在环境光中也如此。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220427162944429.png" alt="image-20220427162944429" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220427162944429.png" alt="image-20220427162944429" style="zoom:50%;" />
 
 <h5 id="MeshLambertMaterial-Lambert网格材质"><a href="#MeshLambertMaterial-Lambert网格材质" class="headerlink" title="MeshLambertMaterial(Lambert网格材质)"></a>MeshLambertMaterial(Lambert网格材质)</h5><p><strong>一种非光泽表面的材质，没有镜面高光</strong>。该材质基于Lambertian模型(漫反射模型)，可以很好模拟未经处理的木材或石材，无法模拟具有镜面高光的光泽表面(如涂漆木材)。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220427163532571.png" alt="image-20220427163532571" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220427163532571.png" alt="image-20220427163532571" style="zoom:50%;" />
 
 <h5 id="MeshPhongMaterial-Phong网格材质"><a href="#MeshPhongMaterial-Phong网格材质" class="headerlink" title="MeshPhongMaterial(Phong网格材质)"></a>MeshPhongMaterial(Phong网格材质)</h5><p><strong>一种用于具有镜面高光的光泽表面的材质。</strong>该材质基于Blinn-Phong模型，可以模拟具有镜面高光的光泽表面(如涂漆木材，烤瓷、陶瓷等具有质感的物体表面)。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220427163614038.png" alt="image-20220427163614038" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220427163614038.png" alt="image-20220427163614038" style="zoom:50%;" />
 
 <h5 id="MeshStandardMaterial-标准网格材质"><a href="#MeshStandardMaterial-标准网格材质" class="headerlink" title="MeshStandardMaterial(标准网格材质)"></a>MeshStandardMaterial(标准网格材质)</h5><p>一种基于<strong>物理</strong>的标准材质。目前PBR(基于物理的渲染)已成为许多3D应用程序的标准，如Unity、Unreal、3Dmax等。</p>
 <p>该模型比MeshLambertMaterial和MeshPhongMaterial材质更加精确和逼真，但计算成本也相应提高。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220427164552537.png" alt="image-20220427164552537" style="zoom:50%;" />
+<img src=".\初识threejs\image-20220427164552537.png" alt="image-20220427164552537" style="zoom:50%;" />
 
 
 
 <h3 id="threejs动画流程"><a href="#threejs动画流程" class="headerlink" title="threejs动画流程"></a>threejs动画流程</h3><p>下面以一个车模型的动画作为案例，来描述整个threejs动画实现的过程。</p>
-<img src="D:\blog\source\_posts\初始threejs.assets\image-20220427173555975.png" alt="image-20220427173555975" style="zoom: 50%;" />
+<img src=".\初识threejs\image-20220427173555975.png" alt="image-20220427173555975" style="zoom: 50%;" />
 
 <ol>
 <li>创建并获取容器标签。</li>
