@@ -240,7 +240,7 @@
             
   
     <article
-  id="post-初始threejs"
+  id="post-初识threejs"
   class="
     article article-type-post
     
@@ -251,107 +251,30 @@
 >
   <div class="article-inner">
     
-    <div class="article-entry" itemprop="articleBody">
-       <h2 id="threejs"><a href="#threejs" class="headerlink" title="threejs"></a>threejs</h2><p>threejs官网称其为“JavaScript 3D library”。threejs是基于WebGL封装的库，而WebGL又起源于openGL。openGL是一个跨平台的2D/3D绘图标准，WebGL则是openGL在浏览器这个分支的一个实现。</p>
-<p>前端开发人员如果直接使用WebGL的接口进行浏览器图形编程是非常麻烦的。WebGL中只有非常基础的API，后期需要编程人员用丰富的数学和绘图知识等才能进行3D编程任务。threejs对WegGL进行了封装，使得 开发人员在不需要有深度的数学知识的前提下，能够进行Web 3D的开发。甚至说一个人如果前端三剑客只是略知一二，他也可以使用threejs顺利完成图形编程，对新人非常友好。</p>
-<h3 id="threejs基本要素"><a href="#threejs基本要素" class="headerlink" title="threejs基本要素"></a>threejs基本要素</h3><h4 id="场景（scene）"><a href="#场景（scene）" class="headerlink" title="场景（scene）"></a>场景（scene）</h4><p>场景是一个容器，容纳着除渲染器以外的三维时间的一切。如物体、灯光和摄像机。</p>
-<h4 id="摄像机（camera）"><a href="#摄像机（camera）" class="headerlink" title="摄像机（camera）"></a>摄像机（camera）</h4><p>摄像机的抽象基类。构建新摄像机时应始终继承该类。并且在创建新camera时，该类不是直接调用，应通过它来创建一个PerspectiveCamera(透视摄像机) 或者 OrthographicCamera(正交摄像机)。</p>
-<h5 id="PerspectiveCamera-透视摄像机"><a href="#PerspectiveCamera-透视摄像机" class="headerlink" title="PerspectiveCamera(透视摄像机)"></a>PerspectiveCamera(透视摄像机)</h5><p>该投影模式模拟人眼所看到的景象，符合物理世界近大远小的真实情况。</p>
-<h5 id="OrthographicCamera-正交摄像机"><a href="#OrthographicCamera-正交摄像机" class="headerlink" title="OrthographicCamera(正交摄像机)"></a>OrthographicCamera(正交摄像机)</h5><p>该投影模式下，改变相机和物体的距离，始终不会改变物体的大小。适用于渲染2D场景和UI元素。</p>
-<h4 id="渲染器（render）"><a href="#渲染器（render）" class="headerlink" title="渲染器（render）"></a>渲染器（render）</h4><p>将 camera 在 scene 里看到的内容渲染/绘制到canvas上。</p>
-<h4 id="几何体（geometry）"><a href="#几何体（geometry）" class="headerlink" title="几何体（geometry）"></a>几何体（geometry）</h4><p>3D物体都是通过点成线，线成面，面成几何体得来的。threejs中常见的几何体有BoxGeometry(立方体)、CircleGeometry(圆形体)、CylinderGeometry(圆柱体)、SphereGeometry(球体) 和 WireframeGeometry(网格几何体)等。这些几何体基于三点确定一个面的原理，用最简洁且易控制的方式来呈现。其中WireframeGeometry可以添加在另一个实几何体上，对其以线框的形式进行查看。</p>
-<p><img src="%E5%88%9D%E5%A7%8Bthreejs.assets/image-20220425114903847.png" alt="image-20220425114903847"></p>
-<p><img src="%E5%88%9D%E5%A7%8Bthreejs.assets/image-20220425114950009.png" alt="image-20220425114950009"></p>
-<p><img src="%E5%88%9D%E5%A7%8Bthreejs.assets/image-20220425115014252.png" alt="image-20220425115014252"></p>
-<p>每个几何体可以通过controls面板来动态控制浏览器中所看到几何体的形状大小等属性。以球体为例，我们通过调节widthSegments(水平分段数) 和 heightSegment(垂直分段数) 来控制点和面的数量，以此让球达到更圆的效果。</p>
-<h4 id="灯光（light）"><a href="#灯光（light）" class="headerlink" title="灯光（light）"></a>灯光（light）</h4><p>光源基类。所有其他光类型都继承该类的属性和方法。常见光类型有AmbientLight(环境光)、DirectionLight(平行光)、PointLight(点光源)、SpotLight(聚光灯)，以MeshLambert网格材质来看下各种光的不同之处。</p>
-<h5 id="AmbientLight-环境光"><a href="#AmbientLight-环境光" class="headerlink" title="AmbientLight(环境光)"></a>AmbientLight(环境光)</h5><p>3D引擎的默认光类型为环境光，光会均匀照亮场景中的所有物体。由于其无方向，不能用来投影阴影。</p>
-<p>注：默认环境光为：0x000000(黑色)，大多情况需模拟白光</p>
-<img src="初始threejs.assets/image-20220425150507271.png" alt="image-20220425150507271" style="zoom:50%;" />
-
-<h5 id="DirectionLight-平行光"><a href="#DirectionLight-平行光" class="headerlink" title="DirectionLight(平行光)"></a>DirectionLight(平行光)</h5><p>平行光指沿着特定方向发射的光。常常用来模拟日光效果。由于太阳离我们足够远，我们可以近似认为太阳的光线是平行的。</p>
-<img src="初始threejs.assets/image-20220425151541586.png" alt="image-20220425151541586" style="zoom:50%;" />
-
-<p>可以看到，平行光下的物体表面受光不再均匀，更加有立体感和质感了。同时，平行光在近处同位置的地方和点光源的效果是相似的，但是点光源受距离影响，而平行光没有此限制。</p>
-<h5 id="PointLight-点光源"><a href="#PointLight-点光源" class="headerlink" title="PointLight(点光源)"></a>PointLight(点光源)</h5><p>从一个点向各方向发出的光源。用来模拟灯泡发出的光。</p>
-<img src="初始threejs.assets/image-20220425152806520.png" alt="image-20220425152806520" style="zoom:50%;" />
-
-<p>此图和上图都是在camera坐标(0,0,5)，光源坐标(0,0,5)条件下的效果图，可以说几乎无差别。再更改光源的坐标为(0,0,80)，发现平行光无变化，而点光源下的物体明显变暗了。</p>
-<img src="初始threejs.assets/image-20220425153115615.png" alt="image-20220425153115615" style="zoom:50%;" />
-
-<p>我认为在各种光类型的照射范围内，环境光可以看作光在三维上的均匀；平行光可以看作二维上的均匀，即线均匀；点光源可以看作一维上的均匀，即点均匀。</p>
-<h5 id="SpotLight-聚光灯"><a href="#SpotLight-聚光灯" class="headerlink" title="SpotLight(聚光灯)"></a>SpotLight(聚光灯)</h5><p>光线从一个点沿着一个方向射出，随着光线照射变远，光线圆锥体的尺寸也逐渐增大。</p>
-<img src="初始threejs.assets/image-20220425153911844.png" alt="image-20220425153911844" style="zoom:50%;" />
-
-<p>经过几种光源的对比之后，我认为聚光灯的立体感和真实感是最好的，图上可能看不出来。这一部分原因得益于其可以投射阴影。</p>
-<h4 id="纹理贴图（Texture）"><a href="#纹理贴图（Texture）" class="headerlink" title="纹理贴图（Texture）"></a>纹理贴图（Texture）</h4><p>作用在物体表面的一种物体修饰，也可作为反射、折射贴图。</p>
-<h4 id="材质（material）"><a href="#材质（material）" class="headerlink" title="材质（material）"></a>材质（material）</h4><p>材质描述了对象的外观，定义方式与渲染器无关。需要更换渲染器无需重写材质。常见的材质有MeshBasicMaterial(基础网格材质)、MeshLambertMaterial(Lambert网格材质)、MeshPhongMaterial(Phong网格材质)、MeshStandardMaterial(标准网格材质)等。</p>
-<h5 id="MeshBasicMaterial-基础网格材质"><a href="#MeshBasicMaterial-基础网格材质" class="headerlink" title="MeshBasicMaterial(基础网格材质)"></a>MeshBasicMaterial(基础网格材质)</h5><p>这种材质不受光照影响，呈现的颜色即为其着色，即使在环境光中也如此。</p>
-<img src="初始threejs.assets/image-20220427162944429.png" alt="image-20220427162944429" style="zoom:50%;" />
-
-<h5 id="MeshLambertMaterial-Lambert网格材质"><a href="#MeshLambertMaterial-Lambert网格材质" class="headerlink" title="MeshLambertMaterial(Lambert网格材质)"></a>MeshLambertMaterial(Lambert网格材质)</h5><p><strong>一种非光泽表面的材质，没有镜面高光</strong>。该材质基于Lambertian模型(漫反射模型)，可以很好模拟未经处理的木材或石材，无法模拟具有镜面高光的光泽表面(如涂漆木材)。</p>
-<img src="初始threejs.assets/image-20220427163532571.png" alt="image-20220427163532571" style="zoom:50%;" />
-
-<h5 id="MeshPhongMaterial-Phong网格材质"><a href="#MeshPhongMaterial-Phong网格材质" class="headerlink" title="MeshPhongMaterial(Phong网格材质)"></a>MeshPhongMaterial(Phong网格材质)</h5><p><strong>一种用于具有镜面高光的光泽表面的材质。</strong>该材质基于Blinn-Phong模型，可以模拟具有镜面高光的光泽表面(如涂漆木材，烤瓷、陶瓷等具有质感的物体表面)。</p>
-<img src="初始threejs.assets/image-20220427163614038.png" alt="image-20220427163614038" style="zoom:50%;" />
-
-<h5 id="MeshStandardMaterial-标准网格材质"><a href="#MeshStandardMaterial-标准网格材质" class="headerlink" title="MeshStandardMaterial(标准网格材质)"></a>MeshStandardMaterial(标准网格材质)</h5><p>一种基于<strong>物理</strong>的标准材质。目前PBR(基于物理的渲染)已成为许多3D应用程序的标准，如Unity、Unreal、3Dmax等。</p>
-<p>该模型比MeshLambertMaterial和MeshPhongMaterial材质更加精确和逼真，但计算成本也相应提高。</p>
-<img src="初始threejs.assets/image-20220427164552537.png" alt="image-20220427164552537" style="zoom:50%;" />
-
-
-
-<h3 id="threejs动画流程"><a href="#threejs动画流程" class="headerlink" title="threejs动画流程"></a>threejs动画流程</h3><p>下面以一个车模型的动画作为案例，来描述整个threejs动画实现的过程。</p>
-<img src="初始threejs.assets/image-20220427173555975.png" alt="image-20220427173555975" style="zoom: 50%;" />
-
-<ol>
-<li>创建并获取容器标签。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> container = <span class="built_in">document</span>.getElementById( <span class="string">&#x27;container&#x27;</span> );</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>创建场景(scene)，以容纳物体和灯光等物体。可以通过创建的场景实例来修改背景色、添加环境贴图等。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line">scene.background = <span class="keyword">new</span> THREE.Color( <span class="number">0x333333</span> );</span><br><span class="line">scene.environment = <span class="keyword">new</span> RGBELoader().load( <span class="string">&#x27;textures/equirectangular/venice_sunset_1k.hdr&#x27;</span> );</span><br><span class="line">scene.environment.mapping = THREE.EquirectangularReflectionMapping;</span><br><span class="line">scene.fog = <span class="keyword">new</span> THREE.Fog( <span class="number">0x999999</span>, <span class="number">1</span>, <span class="number">1000</span> );</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>*(非必需) 创建坐标格辅助对象(grid)，作为坐标参照或模型地面模拟。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grid = <span class="keyword">new</span> THREE.GridHelper( <span class="number">20</span>, <span class="number">40</span>, <span class="number">0xffffff</span>, <span class="number">0xffffff</span> );</span><br><span class="line">grid.material.opacity = <span class="number">0.2</span>;</span><br><span class="line">grid.material.transparent = <span class="literal">true</span>;</span><br><span class="line">scene.add( grid );</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>创建透视摄像机(PerspectiveCamera)，定义摄像机的视锥体，位置。可以定义和改变zoom等摄像机属性，但之后需要调用.updateProjectionMatrix()方法更新摄像机投影矩阵，使得变化生效；同时可以引入轨道控制器(OrbitControls)，使得相机围绕目标进行轨道运动。在用户进行鼠标拖动等手动引起摄像机变换的操作时，在循环中调用update。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">camera = <span class="keyword">new</span> THREE.PerspectiveCamera( <span class="number">40</span>, <span class="built_in">window</span>.innerWidth / <span class="built_in">window</span>.innerHeight, <span class="number">0.1</span>, <span class="number">100</span> );</span><br><span class="line">camera.position.set( <span class="number">4.25</span>, <span class="number">1.4</span>, - <span class="number">4.5</span> );</span><br><span class="line">camera.zoom = <span class="number">1</span>;</span><br><span class="line">camera.updateProjectionMatrix();</span><br><span class="line"></span><br><span class="line">controls = <span class="keyword">new</span> OrbitControls( camera, container );</span><br><span class="line">controls.enableDamping = <span class="literal">true</span>;  <span class="comment">//阻尼惯性</span></span><br><span class="line">controls.maxDistance = <span class="number">20</span>;</span><br><span class="line">controls.target.set( <span class="number">0</span>, <span class="number">0.5</span>, <span class="number">0</span> );  <span class="comment">//轨道焦点</span></span><br><span class="line">controls.update();  </span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>创建渲染器(render)。通过.setAnimationLoop(callback)方法更新每一帧画面。callback是每个可用帧都会调用的函数，可用来代替requestAnimationFrame的内置函数。对于WebXR项目，必须使用此函数。配置完后，需要将render实例的dom元素挂在容器上。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">renderer = <span class="keyword">new</span> THREE.WebGLRenderer( &#123; <span class="attr">antialias</span>: <span class="literal">true</span> &#125; );</span><br><span class="line">renderer.setPixelRatio( <span class="built_in">window</span>.devicePixelRatio );</span><br><span class="line">renderer.setSize( <span class="built_in">window</span>.innerWidth, <span class="built_in">window</span>.innerHeight );</span><br><span class="line">renderer.setAnimationLoop( render );</span><br><span class="line">renderer.outputEncoding = THREE.sRGBEncoding;</span><br><span class="line">renderer.toneMapping = THREE.ACESFilmicToneMapping;</span><br><span class="line">renderer.toneMappingExposure = <span class="number">0.85</span>;</span><br><span class="line">container.appendChild( renderer.domElement );</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>创建材质(material)，以供车模型以及轮胎模型等使用。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bodyMaterial = <span class="keyword">new</span> THREE.MeshPhysicalMaterial( &#123;</span><br><span class="line">  <span class="attr">color</span>: <span class="number">0xff0000</span>, <span class="attr">metalness</span>: <span class="number">1.0</span>, <span class="attr">roughness</span>: <span class="number">0.5</span>, <span class="attr">clearcoat</span>: <span class="number">1.0</span>, <span class="attr">clearcoatRoughness</span>: <span class="number">0.03</span>, <span class="attr">sheen</span>: <span class="number">0.5</span></span><br><span class="line">&#125;);  <span class="comment">//车身材质</span></span><br><span class="line"><span class="keyword">const</span> detailsMaterial = <span class="keyword">new</span> THREE.MeshStandardMaterial( &#123;</span><br><span class="line">	<span class="attr">color</span>: <span class="number">0xffffff</span>, <span class="attr">metalness</span>: <span class="number">1.0</span>, <span class="attr">roughness</span>: <span class="number">0.5</span></span><br><span class="line">&#125;);  <span class="comment">//车轱辘材质</span></span><br><span class="line"><span class="keyword">const</span> glassMaterial = <span class="keyword">new</span> THREE.MeshPhysicalMaterial( &#123;</span><br><span class="line">	<span class="attr">color</span>: <span class="number">0xffffff</span>, <span class="attr">metalness</span>: <span class="number">0.25</span>, <span class="attr">roughness</span>: <span class="number">0</span>, <span class="attr">transmission</span>: <span class="number">1.0</span></span><br><span class="line">&#125;);  <span class="comment">//车玻璃材质</span></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li><p>创建GLTFLoader实例，通过gl传输格式高效加载3D内容。有需要可以通过添加dracoLoader实例压缩和解压缩3D网格和点云。通过GLTFLoader实例的load方法加载模型，以及在加载中和加载完成时对模型做处理。最后将车模型添加到场景中。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">loader.load( <span class="string">&#x27;models/gltf/ferrari.glb&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"> gltf </span>) </span>&#123;</span><br><span class="line">	<span class="keyword">const</span> carModel = gltf.scene.children[ <span class="number">0</span> ];</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;body&#x27;</span> ).material = bodyMaterial;</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;rim_fl&#x27;</span> ).material = detailsMaterial;</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;rim_fr&#x27;</span> ).material = detailsMaterial;</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;rim_rr&#x27;</span> ).material = detailsMaterial;</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;rim_rl&#x27;</span> ).material = detailsMaterial;</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;trim&#x27;</span> ).material = detailsMaterial;</span><br><span class="line">	carModel.getObjectByName( <span class="string">&#x27;glass&#x27;</span> ).material = glassMaterial;</span><br><span class="line"></span><br><span class="line">	wheels.push(</span><br><span class="line">		carModel.getObjectByName( <span class="string">&#x27;wheel_fl&#x27;</span> ),</span><br><span class="line">		carModel.getObjectByName( <span class="string">&#x27;wheel_fr&#x27;</span> ),</span><br><span class="line">		carModel.getObjectByName( <span class="string">&#x27;wheel_rl&#x27;</span> ),</span><br><span class="line">		carModel.getObjectByName( <span class="string">&#x27;wheel_rr&#x27;</span> )</span><br><span class="line">	);</span><br><span class="line">	scene.add( carModel );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>定义帧函数，循环调用，以实现动画效果。</p>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	controls.update();</span><br><span class="line">	<span class="keyword">const</span> time = - performance.now() / <span class="number">1000</span>;</span><br><span class="line">  <span class="keyword">for</span> ( <span class="keyword">let</span> i = <span class="number">0</span>; i &lt; wheels.length; i ++ ) &#123;</span><br><span class="line">	  wheels[ i ].rotation.x = time * <span class="built_in">Math</span>.PI * <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  grid.position.z = - ( time ) % <span class="number">1</span>;</span><br><span class="line">  renderer.render( scene, camera );</span><br><span class="line">  stats.update();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Web-3D的趋势"><a href="#Web-3D的趋势" class="headerlink" title="Web 3D的趋势"></a>Web 3D的趋势</h3><p>疫情自2019年年初以来，已经持续了两年半的时间，并且我认为客观来讲在未来十几二十年甚至更久，新冠疫情都不会消失，甚至会衍生为一种类流行性感冒的常态。同时，我国的防疫政策和行动在全球都起到了领头羊的作用，“非必要不外出”、“居家隔离”等也是我国防疫有别于他国的一大优势。在这样一种趋势下，人们的日常外出时间是显著要低于2019年之前的。这样使得一些如线下看房、线下看展、线下逛街等线下活动都会收到疫情限制，这时，一个能够在浏览器加载，不需要消耗太多资源性能的Web 3D图形就能够排上用场了。这样就给很大一部分有出门需求但不得居家的人们提供了很大的便捷，并且趁着互联网近几年膨胀发展，作为其下分支的web 3D也将受益。</p>
-<p>目前国内外已经涌现了许多实现Web 3D的javascript库，但Web 3D的发展仍然有很大的发展空间，随着人们刷抖音逛B站对视频清晰度要求愈发提高，Web 3D要想发展好，重点是如何提高绘制图形的精确度、真实感等。</p>
-<p>但目前国内关于Web 3D的文章非常之少，很多的学习者都是通过查看源码自学而有所突破。其中一部分原因可能是要使用Web 3D非常容易，但其背后的深层原理就鲜为人知了。</p>
+    <header class="article-header">
+      
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/22/%E5%88%9D%E8%AF%86threejs/">初始threejs</a>
+    </h1>
+  
+  <a href="/2022/05/22/%E5%88%9D%E8%AF%86threejs/" class="archive-article-date">
+  	<time datetime="2022-05-22T13:30:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-22</time>
+</a> 
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+       <h2 id="threejs"><a href="#threejs" class="headerlink" title="threejs"></a>threejs</h2><p>threejs官网称其为“JavaScript 3D library”。threejs是基于WebGL封装的库，而WebGL又起源于openGL。openGL是一个跨平台的2D/3D绘图标准，WebGL则是openGL在浏览器这个分支的一个实现。</p> 
+      <a class="article-more-a" href="/2022/05/22/%E5%88%9D%E8%AF%86threejs/#more"
+        >more >></a
+      >
+        
     </div>
     <div class="article-info article-info-index">
         
  
       <p class="article-more-link">
-        <a class="article-more-a" href="/2022/05/20/%E5%88%9D%E5%A7%8Bthreejs/"
+        <a class="article-more-a" href="/2022/05/22/%E5%88%9D%E8%AF%86threejs/"
           >展开全文 >></a
         >
       </p>
@@ -389,75 +312,30 @@
 >
   <div class="article-inner">
     
-    <div class="article-entry" itemprop="articleBody">
-       <h2 id="二维码的原理"><a href="#二维码的原理" class="headerlink" title="二维码的原理"></a>二维码的原理</h2><p>摘自<a target="_blank" rel="noopener" href="https://juejin.cn/post/6940976355097985032%E3%80%81https://juejin.cn/post/7064004375869390879%EF%BC%8C%E6%AD%A4%E5%A4%84%E5%8F%AA%E5%81%9A%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%E5%92%8C%E6%80%BB%E7%BB%93%E3%80%82">https://juejin.cn/post/6940976355097985032、https://juejin.cn/post/7064004375869390879，此处只做一些个人理解和总结。</a></p>
-<h3 id="二维码发展简史"><a href="#二维码发展简史" class="headerlink" title="二维码发展简史"></a>二维码发展简史</h3><h4 id="条形码"><a href="#条形码" class="headerlink" title="条形码"></a>条形码</h4><p>1948年，费城煤气科技学院的校长接到当地一家超市老板请求，设计一种可以扫描善品价格的装置，提高收银和销售效率。伯纳德·塞尔沃作为学院里的一名研究生，听此消息之后，准备和朋友约瑟夫·伍德兰德抓住这个机会。直到1969年，在IBM公司工作的伯纳德·塞尔沃才研究出了可识别的<strong>条形码</strong>。</p>
-<img src="二维码的原理.assets/image-20220506181255291.png" alt="image-20220506181255291" style="zoom:50%;" />
-
-<p>随着条形码的广泛应用，需求也不断增大，不足之处逐渐显现出来。</p>
-<ol>
-<li>只能表示数字、字母</li>
-<li>条形码又称一维码，能表示的数据量有限</li>
-</ol>
-<p>这些不足使得人们又去研究一种能表达更多信息的东西。</p>
-<h4 id="二维码"><a href="#二维码" class="headerlink" title="二维码"></a>二维码</h4><p>本来我以为二维码在中国如此大放异彩，理应是中国人发明的，但实际不然。二维码是由日本人腾弘原发明的。他想到从增加维度的角度来扩大信息存量，这是二维码的雏形。</p>
-<p>紧接着就是实现高速的读取。我们天天见到的二维码相信大家都有印象，它有三个角是固定的正方形。原理就是利用这三个角作定位，剩余一个角判断二维码的方向。这就是为什么我们用手机无论从哪个角度扫描，都可以读取二维码的内容的原因。</p>
-<p>二维码的信息存储量相比条形码提升了300倍，识别速度提升了10倍。在1994年，DENSO WAVE公司面向全日本开始推广二维码技术，并将其命名为“Quick Response Code”。时至今日，二维码已经在全世界范围内得到广泛应用，尤其是在中国可以说是发挥到了极致。</p>
-<h3 id="技术原理"><a href="#技术原理" class="headerlink" title="技术原理"></a>技术原理</h3><p>二维码中的信息包含了文本、url、图片和音视频等，是一种信息的表现方式，我们可以通过二维码这个entry访问到它对应的信息。在前端领域来说，我觉得这就像是javascript的指针一般。</p>
-<p>二维码上的黑白小方块实际对应了计算机中的0和1，可以看成是一个0-1矩阵，1代表黑色，0代表白色，二维码实际就是一个0-1组成的信息组合。</p>
-<p><img src="%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86.assets/6689beb5eef146cfbfeeb350c9488425~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp" alt="image.png"></p>
-<h3 id="二维码扫码登录原理"><a href="#二维码扫码登录原理" class="headerlink" title="二维码扫码登录原理"></a>二维码扫码登录原理</h3><p>移动端登录和二维码扫描登录PC端的背后，实际是基于token的认证机制。这套机制将某些信息绑定在一起生成一个新的唯一标识，在客户端和服务端之间传递。这就是为什么手机端登录用户信息之后不会存储登录密码，而是在登录之后自动生成一个绑定用户Id和设备信息的token。下次进行登录直接将token发送给服务端进行登录验证，不再需要输入密码。下面是token机制的大致流程：</p>
-<ol>
-<li><p>账号密码登录时，客户端会将设备信息一起传递给服务端，</p>
-</li>
-<li><p>如果账号密码校验通过，服务端会把账号与设备进行一个绑定，存在一个数据结构中，这个数据结构中包含了账号ID，设备ID，设备类型等等</p>
-</li>
-<li><p>服务端生成根据数据结构生成token，客户端收到token后做一个本地保存，每次重新访问服务端都需要携带token和设备信息</p>
-</li>
-<li><p>服务端将客户端传过来的token和设备信息进行比较，若相同，则校验通过；不同则拒绝直接访问。</p>
-</li>
-</ol>
-<p>可见在移动端的账号密码登录过程中，客户端并没有保存你的密码，而是将一些关联信息包装成一个token，这个token就是它保存的信息了。可以说，客户端登录的目的，就是获取一个唯一token；那么通过二维码扫描登录PC端是怎么生成token的呢？</p>
-<p>首先我们先来回顾一下二维码扫码登录的大致流程：</p>
-<img src="二维码的原理.assets/image-20220507101353090.png" alt="image-20220507101353090" style="zoom:50%;" />
-
-<p>在这个流程中，二维码其实是存在三种状态的，分别是<strong>待扫描</strong>、<strong>已扫描待确认</strong>和<strong>已确认</strong>。知道了这三种状态之后我们再来看一下每个状态下二维码中存储的信息都有哪些。</p>
-<img src="二维码的原理.assets/image-20220507101606274.png" alt="image-20220507101606274" style="zoom: 67%;" />
-
-<p>可以看见，在第一个状态向第二个状态转变时，二维码中多了一份账号ID的信息，在第二个状态向第三个状态转变时，二维码中又多了一份PC端tokenhvh的确认信息。整个流程细分下来，又可以分为二维码准备、扫描二维码、登录确认三个具体过程。</p>
-<h4 id="二维码准备"><a href="#二维码准备" class="headerlink" title="二维码准备"></a>二维码准备</h4><img src="二维码的原理.assets/image-20220507104418582.png" alt="image-20220507104418582" style="zoom:67%;" />
-
-<p>在理解这部分内容的时候，可以打开PC端微信，通过二维码扫码登录来实时理解这部分的过程。</p>
-<ol>
-<li>首先打开PC端登录界面，向服务端发送生成二维码请求，并携带设备信息</li>
-<li>服务端接收请求，生成二维码ID，将其与设备信息绑定在一起，将二维码ID返回给PC端</li>
-<li>PC端接收到二维码ID之后，根据此ID生成二维码，里面存储了二维码ID和设备信息</li>
-<li>向服务端轮询二维码的状态，以便在用户扫描和确认之后更新二维码状态</li>
-</ol>
-<h4 id="扫描二维码"><a href="#扫描二维码" class="headerlink" title="扫描二维码"></a>扫描二维码</h4><img src="二维码的原理.assets/image-20220507105056914.png" alt="image-20220507105056914" style="zoom:67%;" />
-
-<ol>
-<li>手机端扫描PC端生成的二维码，获取二维码ID</li>
-<li>手机端将<strong>已经登录的账号信息</strong>和二维码ID一起发送给服务端</li>
-<li>服务端接收到信息后，将账号信息和二维码ID、设备信息绑定在一起，生成<strong>临时token</strong>。并将临时token返回给手机端</li>
-<li>PC端轮询二维码状态时，发现状态已变成已扫描待确认，更改二维码状态</li>
-</ol>
-<p>在这部分流程中有两个需要注意的点，能够扫描二维码的一定是已经登录的账号；临时token和token并无本质区别，只是在执行某些操作之后就会失效。比如我们在微信登录扫码之后，在手机端的确认登录页面不仅有“确认登录”按钮，还有“取消登录”按钮，临时token就是对这种临时变卦的情况的考虑。</p>
-<h4 id="登录确认"><a href="#登录确认" class="headerlink" title="登录确认"></a>登录确认</h4><img src="二维码的原理.assets/image-20220507110239600.png" alt="image-20220507110239600" style="zoom:67%;" />
-
-<ol>
-<li>手机端确认登录之后，携带临时token到服务端</li>
-<li>服务端改变二维码状态，在token中新增PC端tokenhvh确认信息，生成新的token返回给PC端</li>
-<li>PC端轮询二维码状态时，发现状态已变成已确认，更改二维码状态，PC端登录完成</li>
-<li>登录完成之后，PC端通过携带token访问服务端资源</li>
-</ol>
+    <header class="article-header">
+      
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/">二维码的原理</a>
+    </h1>
+  
+  <a href="/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/" class="archive-article-date">
+  	<time datetime="2022-05-13T12:29:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
+</a> 
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+       <h2 id="二维码的原理"><a href="#二维码的原理" class="headerlink" title="二维码的原理"></a>二维码的原理</h2><p>摘自<a target="_blank" rel="noopener" href="https://juejin.cn/post/6940976355097985032%E3%80%81https://juejin.cn/post/7064004375869390879%EF%BC%8C%E6%AD%A4%E5%A4%84%E5%8F%AA%E5%81%9A%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%E5%92%8C%E6%80%BB%E7%BB%93%E3%80%82">https://juejin.cn/post/6940976355097985032、https://juejin.cn/post/7064004375869390879，此处只做一些个人理解和总结。</a></p> 
+      <a class="article-more-a" href="/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/#more"
+        >more >></a
+      >
+        
     </div>
     <div class="article-info article-info-index">
         
  
       <p class="article-more-link">
-        <a class="article-more-a" href="/2022/05/20/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/"
+        <a class="article-more-a" href="/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/"
           >展开全文 >></a
         >
       </p>
@@ -495,106 +373,30 @@
 >
   <div class="article-inner">
     
-    <div class="article-entry" itemprop="articleBody">
-       <h2 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h2><p>redux是Javascript状态容器，提供可预测化的状态管理</p>
-<h3 id="为什么需要redux"><a href="#为什么需要redux" class="headerlink" title="为什么需要redux"></a>为什么需要redux</h3><p>随着单页应用开发的趋势和复杂度的增加，Javascript需要管理非常多的state。如果一个状态模型model的变化与另一个model相关联，这就会导致两者所对应的view视图发生变化。这样的关联变得足够多时，state的变化就非常混乱，变得不可预测和不受控制了。</p>
-<h3 id="redux的三大原则"><a href="#redux的三大原则" class="headerlink" title="redux的三大原则"></a>redux的三大原则</h3><ol>
-<li><strong>单一数据源</strong></li>
-</ol>
-<p><strong>整个应用的state被存储在一棵对象树上，并且这个对象树只存在于唯一一个store中。</strong></p>
-<p>这让同构应用开发变得容易，从服务端来的state在无需编写更多代码情况被序列化注入到客户端中，同是因为单一数据来源，后期调试和bug修复也变得容易。</p>
-<ol start="2">
-<li><strong>State是只读的</strong></li>
-</ol>
-<p><strong>在redux中的，只能通过触发action来改变state。</strong></p>
-<p>这样一个原则同样在react中能够看到。比如react的类组件仅能通过<strong>setState</strong>改变state；react的函数式组件仅能通过<strong>useState</strong> Hook自定义的setXXXX改变state。我认为这应该也是react和redux兼容性比vue和redux兼容性更好的原因之一。</p>
-<ol start="3">
-<li><strong>使用纯函数来执行修改</strong></li>
-</ol>
-<p><strong>reducer是一个纯函数，描述了action如何改变状态树。</strong></p>
-<p>纯函数是指一个函数的返回结果只依赖其参数，并且执行过程中没有副作用。只依赖参数是说函数返回值不受外部值影响，只取决于传入的参数；副作用则是指修改外部变量、调用DOM API修改页面，发送Ajax请求、调用window.reload刷新浏览器和console.log等等操作。</p>
-<h3 id="redux的使用"><a href="#redux的使用" class="headerlink" title="redux的使用"></a>redux的使用</h3><p><img src="%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86.assets/2471723-20210720223003182-771237366.png" alt="img"></p>
-<ol>
-<li>通过createStore创建一个store</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">&#x27;redux&#x27;</span> <span class="comment">// 引入redux </span></span><br><span class="line"><span class="keyword">const</span> store = createStore() <span class="comment">// 创建数据的公共存储区域</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>创建reducer，接收state和action两个参数，返回新的state(可以细分reducer，用combineReducers将各个自定义reducer连接起来)</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> initialState = &#123; </span><br><span class="line">  <span class="attr">counter</span>: <span class="number">0</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">const</span> reducer = <span class="function">(<span class="params">state = initialState, action</span>) =&gt;</span> &#123; </span><br><span class="line">  <span class="comment">//do something</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>store和reducer建立连接，通过store.getState()来获取当前state</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = createStore(reducer) </span><br><span class="line">store.getState()</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>通过dispatch触发action，action是一个包括type、payload负载数据的对象</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(&#123; </span><br><span class="line">  <span class="attr">type</span>: <span class="string">&quot;&quot;</span>, </span><br><span class="line">  <span class="attr">payload</span>: </span><br><span class="line">&#125;) </span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>reducer中根据action的不同，去执行不同的操作，返回不同的state</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> reducer = <span class="function">(<span class="params">state = initialState, action</span>) =&gt;</span> &#123; </span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123; </span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;INCREMENT&quot;</span>: </span><br><span class="line">      <span class="keyword">return</span> &#123;...state, <span class="attr">counter</span>: state.counter + <span class="number">1</span>&#125;; </span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;DECREMENT&quot;</span>: </span><br><span class="line">      <span class="keyword">return</span> &#123;...state, <span class="attr">counter</span>: state.counter - <span class="number">1</span>&#125;; </span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;ADD_NUMBER&quot;</span>: </span><br><span class="line">      <span class="keyword">return</span> &#123;...state, <span class="attr">counter</span>: state.counter + action.number&#125; </span><br><span class="line">    <span class="attr">default</span>:  </span><br><span class="line">      <span class="keyword">return</span> state; </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>通过store.subscribe监听store变化，只要store变化，回调函数就会执行</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">store.subscribe(<span class="function">() =&gt;</span> &#123; </span><br><span class="line">  <span class="comment">//do something</span></span><br><span class="line">&#125;) </span><br></pre></td></tr></table></figure>
-
-<p>此外在处理异步数据流时，我们可以在创建同步action函数的基础上，使用redux-saga、redux-thunk等中间件将网络请求结合起来。</p>
-<p>react-redux实现了对react和redux的结合，在原有基础上，提出了容器组件和展示组件(UI组件)的概念。另一个比较大的改变就是使用<strong>connect()<strong>方法实现了从redux state树中以props的形式把数据提供给要渲染的组件，简单来说就是实现了</strong>state</strong>和<strong>view</strong>的关联。另外在connect()前，需要定义mapStateToProps和mapDispatchToProps来规定state和dispatch()需要展示到props里的映射。</p>
-<p><img src="%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86.assets/image-20220420114958820.png" alt="image-20220420114958820"></p>
-<h3 id="全局状态管理的劣势"><a href="#全局状态管理的劣势" class="headerlink" title="全局状态管理的劣势"></a>全局状态管理的劣势</h3><p>不论是redux还是基于redux封装的dva，共同的一点都是为了能够让多个组件共享、订阅、改变state，形成一个state—&gt;view的网结构，在中间层去做state的处理。但只有在如下情况才适合用到全局状态管理：</p>
-<ol>
-<li>中间层的数据处理代码可以复用</li>
-<li>同一个state在多个组件中同步更新，关联使用</li>
-</ol>
-<p>在公司做第一个项目的时候，代码中就有非常多的全局状态管理，当时没有深入去理解内涵，导致我做第二个项目时每对state的处理第一反应就想到了要用到redux或者dva。绝大多数情况下都不需要，用了只会添加项目的复杂度。项目开发中唯一一个比较印象深刻的点就是在开发微前端项目时，子项目需要从主框架中获取到诸如projectId、masterId之类的需要验证项目和用户身份的state，为了在之后的各个页面操作中根据不同身份去执行不同的权限操作。这时就可以使用dva将项目信息、用户信息保存在全局状态下，将state与需要进行身份验证的view相关联。</p>
-<h2 id="Dva"><a href="#Dva" class="headerlink" title="Dva"></a>Dva</h2><p>dva 首先是一个基于 redux 和 redux-saga 的数据流方案，然后为了简化开发体验，dva 还额外内置了 react 和 fetch，所以也可以理解为一个轻量级的应用框架。</p>
-<h3 id="为什么需要Dva？"><a href="#为什么需要Dva？" class="headerlink" title="为什么需要Dva？"></a>为什么需要Dva？</h3><p>这个问题等价于较redux而言，dva做了哪些优化？让我们从dva的特性说起。</p>
-<ul>
-<li><strong>易学易用。</strong>dva是基于现有架构的一层轻量封装，没有任何新概念，全部代码不到100行，仅有6个api。umi更是对dva进行了封装，将api数降至0。对于基于umi开发项目的公司而言，dva就显得非常便捷了。dva对redux-saga进行了封装，这也大大节省了代码量。因为saga的代码实现过于复杂，每监听一个action都需要从fork(派生、分支)—&gt;watcher—&gt;worker的完整代码。</li>
-<li><strong>elm概念</strong>。通过 reducers, effects 和 subscriptions 组织 model。经过redux的学习后，我确切感受到，里面的概念太多，reducer、saga、action都是分离的文件，一旦state种类和数据处理逻辑过多，在文件之间来回切换编辑，就显得非常混乱了。并且这样也带来了移植性差的问题，往往下一个state的创建都是通过上一个state进行cv大法再修改得来的，我们不仅需要移植state，还需要reducer、saga、action等的复制。而dva将reducers、state、effects和subscriptions全部封装在一个model模型中，大大便捷了前端开发人员的工作。</li>
-<li><strong>插件机制。</strong>比如 dva-loading 可以自动处理 loading 状态，不用一遍遍地写 showLoading 和 hideLoading。</li>
-<li><strong>支持HMR。</strong>HMR全称为Hot Module Replacement，意为模块热替换。在webpack中使用HMR，能够在应用运行更新时，无需重新npm run dev或者npm start刷新页面，便能够更新更改的模块，这极大改善了前端开发工作。目前vue-cli、create-react-app、create-umi-app等都自动配置好了热更新功能。dva基于babel-plugin-dva-hmr插件实现了components、routes和models的HMR，不需要手动去进行webpack热更新配置了。</li>
-</ul>
-<h3 id="Dva的使用"><a href="#Dva的使用" class="headerlink" title="Dva的使用"></a>Dva的使用</h3><p><img src="%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86.assets/image-20220420175720094.png" alt="image-20220420175720094"></p>
-<ol>
-<li><strong>app = dva(opts)</strong>  创建应用，返回dva实例。(详见DvaJS官网)</li>
-<li><strong>app.use(hooks)</strong>  配置hooks或者注册插件。(详见DvaJS官网)</li>
-<li><strong>app.model(model)</strong>  注册model。</li>
-</ol>
-<ul>
-<li>namespace用于向外暴露空间，使得dispatch能够对应到指定model</li>
-<li>state存放该命名空间下的状态</li>
-<li>subcriptions在 app.start() 时被执行，数据源不仅可以是state，还能是当前的时间、服务器的 websocket 连接、keyboard 输入、geolocation 变化、history 路由变化等等</li>
-<li>effects存放异步数据处理逻辑</li>
-<li>reducer存放同步数据处理逻辑</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">app.model(&#123;</span><br><span class="line">  <span class="attr">namespace</span>: <span class="string">&#x27;products&#x27;</span>,</span><br><span class="line">  <span class="attr">state</span>: &#123;</span><br><span class="line">    <span class="attr">list</span>: [],</span><br><span class="line">    <span class="attr">loading</span>: <span class="literal">false</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">subscriptions</span>: [</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">dispatch</span>) </span>&#123;</span><br><span class="line">      dispatch(&#123;<span class="attr">type</span>: <span class="string">&#x27;products/query&#x27;</span>&#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">effects</span>: &#123;</span><br><span class="line">    [<span class="string">&#x27;products/query&#x27;</span>]: <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">yield</span> call(delay(<span class="number">800</span>));</span><br><span class="line">      <span class="keyword">yield</span> put(&#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&#x27;products/query/success&#x27;</span>,</span><br><span class="line">        <span class="attr">payload</span>: [<span class="string">&#x27;ant-tool&#x27;</span>, <span class="string">&#x27;roof&#x27;</span>],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">reducers</span>: &#123;</span><br><span class="line">    [<span class="string">&#x27;products/query&#x27;</span>](state) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; ...state, <span class="attr">loading</span>: <span class="literal">true</span>, &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    [<span class="string">&#x27;products/query/success&#x27;</span>](state, &#123; payload &#125;) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; ...state, <span class="attr">loading</span>: <span class="literal">false</span>, <span class="attr">list</span>: payload &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><strong>app.unmodel(namespace)</strong>  取消model注册，清理reducers、effects和subscriptions。</li>
-<li><strong>app.replaceModel(model)</strong>  替换为新model，清理旧model、reducers、effects和subscriptions。</li>
-<li><strong>app.router(({ history, app }) =&gt; RouterConfig)</strong>  注册路由表。官方推荐把配置路由的信息单独抽成一个文件，这样结合babel-plugin-dva-hmr插件可以实现路由和组件的热加载。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.router(<span class="built_in">require</span>(<span class="string">&#x27;./router&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li><strong>app.start(selector?)</strong>  启动应用。无selector参数，会返回一个返回JSX元素的函数。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.start(<span class="string">&#x27;#root&#x27;</span>); <span class="comment">//有selector参数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; IntlProvider &#125; <span class="keyword">from</span> <span class="string">&#x27;react-intl&#x27;</span>;  <span class="comment">//无selector参数</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> App = app.start();</span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">IntlProvider</span>&gt;</span><span class="tag">&lt;<span class="name">App</span> /&gt;</span><span class="tag">&lt;/<span class="name">IntlProvider</span>&gt;</span></span>, htmlElement);</span><br></pre></td></tr></table></figure>
-
+    <header class="article-header">
+      
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/">可预测化状态管理</a>
+    </h1>
+  
+  <a href="/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" class="archive-article-date">
+  	<time datetime="2022-04-30T13:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-30</time>
+</a> 
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+       <h2 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h2><p>redux是Javascript状态容器，提供可预测化的状态管理</p> 
+      <a class="article-more-a" href="/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/#more"
+        >more >></a
+      >
+        
     </div>
     <div class="article-info article-info-index">
         
  
       <p class="article-more-link">
-        <a class="article-more-a" href="/2022/05/20/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/"
+        <a class="article-more-a" href="/2022/04/30/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/"
           >展开全文 >></a
         >
       </p>
