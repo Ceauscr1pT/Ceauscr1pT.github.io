@@ -6,27 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>二维码的原理 | Aixin&#39;s Blog</title>
+  <title>QRcode-principle | Aixin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二维码的原理二维码的原理摘自https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032、https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7064004375869390879，此处只做一些个人理解和总结。">
+  <meta name="description" content="二维码的原理摘自https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032、https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7064004375869390879，此处只做一些个人理解和总结。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二维码的原理">
-<meta property="og:url" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:title" content="QRcode-principle">
+<meta property="og:url" content="http://example.com/2022/05/13/QRcode-principle/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
-<meta property="og:description" content="二维码的原理二维码的原理摘自https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032、https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7064004375869390879，此处只做一些个人理解和总结。">
+<meta property="og:description" content="二维码的原理摘自https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032、https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7064004375869390879，此处只做一些个人理解和总结。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220506181255291.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/BAI%60MG2M3_C950%5DXB%5DW49DL.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220507101353090.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220507101606274.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220507104418582.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220507105056914.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220507110239600.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220506181255291.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/BAI%60MG2M3_C950%5DXB%5DW49DL.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220507101353090.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220507101606274.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220507104418582.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220507105056914.png">
+<meta property="og:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220507110239600.png">
 <meta property="article:published_time" content="2022-05-13T12:29:04.000Z">
-<meta property="article:modified_time" content="2022-05-23T12:34:49.548Z">
+<meta property="article:modified_time" content="2022-05-23T12:45:37.635Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/QRCode-principle/image-20220506181255291.png">
+<meta name="twitter:image" content="http://example.com/2022/05/13/QRcode-principle/QRCode-principle/image-20220506181255291.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -250,7 +250,7 @@
           </div>
           <div id="js-content" class="content-ll">
             <article
-  id="post-二维码的原理"
+  id="post-QRcode-principle"
   class="
     article article-type-post
     
@@ -264,16 +264,16 @@
       
   
     <h1 class="article-title" itemprop="name">
-      二维码的原理
+      QRcode-principle
     </h1>
   
-  <a href="/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/" class="archive-article-date">
+  <a href="/2022/05/13/QRcode-principle/" class="archive-article-date">
   	<time datetime="2022-05-13T12:29:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <h2 id="二维码的原理"><a href="#二维码的原理" class="headerlink" title="二维码的原理"></a>二维码的原理</h2><h2 id="二维码的原理-1"><a href="#二维码的原理-1" class="headerlink" title="二维码的原理"></a>二维码的原理</h2><p>摘自<code>https://juejin.cn/post/6940976355097985032</code>、<code>https://juejin.cn/post/7064004375869390879</code>，此处只做一些个人理解和总结。</p>
+       <h2 id="二维码的原理"><a href="#二维码的原理" class="headerlink" title="二维码的原理"></a>二维码的原理</h2><p>摘自<code>https://juejin.cn/post/6940976355097985032</code>、<code>https://juejin.cn/post/7064004375869390879</code>，此处只做一些个人理解和总结。</p>
 <span id="more"></span>
 
 <h3 id="二维码发展简史"><a href="#二维码发展简史" class="headerlink" title="二维码发展简史"></a>二维码发展简史</h3><h4 id="条形码"><a href="#条形码" class="headerlink" title="条形码"></a>条形码</h4><p>1948年，费城煤气科技学院的校长接到当地一家超市老板请求，设计一种可以扫描善品价格的装置，提高收银和销售效率。伯纳德·塞尔沃作为学院里的一名研究生，听此消息之后，准备和朋友约瑟夫·伍德兰德抓住这个机会。直到1969年，在IBM公司工作的伯纳德·塞尔沃才研究出了可识别的<strong>条形码</strong>。</p>
@@ -385,7 +385,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/13/QRcode-principle/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -402,7 +402,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          初始threejs
+          初识threejs
         
       </div>
     </a>
