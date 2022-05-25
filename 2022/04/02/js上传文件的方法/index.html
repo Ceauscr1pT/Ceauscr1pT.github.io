@@ -8,20 +8,26 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>js上传文件的方法 | Aixin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原生js文件上传和antd组件的文件上传…">
+  <meta name="description" content="Js上传文件的方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js上传文件的方法">
 <meta property="og:url" content="http://example.com/2022/04/02/js%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
-<meta property="og:description" content="原生js文件上传和antd组件的文件上传…">
+<meta property="og:description" content="Js上传文件的方法">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20220412232330593.png">
-<meta property="og:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20220412232311609.png">
+<meta property="og:image" content="http://example.com/image-20220401154616867.png">
+<meta property="og:image" content="http://example.com/image-20220401161720410.png">
+<meta property="og:image" content="http://example.com/image-20220401162231116-2783173.png">
+<meta property="og:image" content="http://example.com/image-20220419173658243.png">
+<meta property="og:image" content="http://example.com/image-20220419173952124.png">
+<meta property="og:image" content="http://example.com/image-20220401162819024.png">
+<meta property="og:image" content="http://example.com/image-20220401162920369-16534842811092.png">
+<meta property="og:image" content="http://example.com/image-20220401163020707-16534842831753.png">
 <meta property="article:published_time" content="2022-04-01T16:16:17.000Z">
-<meta property="article:modified_time" content="2022-04-12T15:47:15.070Z">
+<meta property="article:modified_time" content="2022-05-25T13:24:58.352Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/27361/AppData/Roaming/Typora/typora-user-images/image-20220412232330593.png">
+<meta name="twitter:image" content="http://example.com/image-20220401154616867.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -268,8 +274,7 @@
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <p>原生js文件上传和antd组件的文件上传…</p>
-<span id="more"></span>
+       <h1 id="Js上传文件的方法"><a href="#Js上传文件的方法" class="headerlink" title="Js上传文件的方法"></a>Js上传文件的方法</h1><span id="more"></span>
 
 <h2 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h2><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a><strong>概念</strong></h5><p>Base64内容传送编码被设计用来把任意序列的8位字节描述为一种不易被人直接识别的形式。</p>
 <h5 id="作用"><a href="#作用" class="headerlink" title="作用"></a><strong>作用</strong></h5><ol>
@@ -294,26 +299,43 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> file = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;file&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> image = <span class="built_in">document</span>.querySelector(<span class="string">&quot;img&quot;</span>);</span><br><span class="line">file.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> fileData = <span class="built_in">this</span>.files[<span class="number">0</span>];<span class="comment">//这是我们上传的文件 </span></span><br><span class="line">  <span class="built_in">console</span>.log(fileData);           </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>fileData的内容：(size单位为Bit)</p>
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20220412232330593.png" alt="image-20220412232330593"></p>
+<p><img src="/image-20220401154616867.png" alt="image-20220401154616867"></p>
 </li>
 <li><p>然后运用 FileReader 这个对象，FileReader主要用于<strong>将文件内容读入内存</strong>，通过一系列异步接口，可以在主线程中访问本地文件。使用FileReader对象，web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容，可以使用File对象或者Blob对象来指定所要处理的文件或数据。这里用到了里面的 <strong>readAsDataURL</strong> 这个方法，它能把文件用<strong>base64格式</strong>读出</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">reader.readAsDataURL(fileData);<span class="comment">//异步读取文件内容，结果用data:url的字符串形式表示</span></span><br><span class="line"><span class="comment">/*当读取操作成功完成时调用*/</span></span><br><span class="line">reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e); <span class="comment">//查看对象属性里面有个result属性，属性值，是一大串的base64格式的东西，这个就是我们要的图片</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.result);</span><br><span class="line">  image.setAttribute(<span class="string">&quot;src&quot;</span>, <span class="built_in">this</span>.result)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>fileData实例里面有<strong>type</strong>属性存放文件类型的信息，我们可以通过这属性来判断上传文件类型。（reader.onload里面通过this.result可以获得图片的base64格式，把它赋值给一个变量传到后台，这样就完成了一个图片上传）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> file = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;file&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> image = <span class="built_in">document</span>.querySelector(<span class="string">&quot;img&quot;</span>);</span><br><span class="line">file.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> fileData = <span class="built_in">this</span>.files[<span class="number">0</span>];<span class="comment">//获取到一个FileList对象中的第一个文件(File 对象),是我们上传的文件</span></span><br><span class="line">  <span class="keyword">var</span> pettern = <span class="regexp">/^image/</span>;                </span><br><span class="line">  <span class="built_in">console</span>.info(fileData.type)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!pettern.test(fileData.type)) &#123;</span><br><span class="line">    alert(<span class="string">&quot;图片格式不正确&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">  reader.readAsDataURL(fileData);<span class="comment">//异步读取文件内容，结果用data:url的字符串形式表示</span></span><br><span class="line">  <span class="comment">/*当读取操作成功完成时调用*/</span></span><br><span class="line">  reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e); <span class="comment">//查看对象</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.result);<span class="comment">//要的数据</span></span><br><span class="line">    image.setAttribute(<span class="string">&quot;src&quot;</span>, <span class="built_in">this</span>.result)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\27361\AppData\Roaming\Typora\typora-user-images\image-20220412232311609.png" alt="image-20220412232311609"></p>
+<p><img src="/image-20220401161720410.png" alt="image-20220401161720410"></p>
 </li>
 </ol>
 <h2 id="使用antd的Upload组件上传图片"><a href="#使用antd的Upload组件上传图片" class="headerlink" title="使用antd的Upload组件上传图片"></a>使用antd的Upload组件上传图片</h2><p>上传图片(文件)后，控制台中的file对象即要上传的文件属性如下：(该对象也是beforeUpload方法的参数)</p>
-<p>![image-20220401162231116](/Users/aixin/Library/Application Support/typora-user-images/image-20220401162231116.png)</p>
+<p><img src="/image-20220401162231116-2783173.png" alt="image-20220401162231116"></p>
 <p>上传文件的状态发生改变时，调用onChange的回调方法，参数为：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">file</span>: &#123; <span class="comment">/* ... */</span> &#125;, <span class="comment">//当前操作的文件对象</span></span><br><span class="line">  <span class="attr">fileList</span>: [ <span class="comment">/* ... */</span> ], <span class="comment">//当前的文件列表</span></span><br><span class="line">  <span class="attr">event</span>: &#123; <span class="comment">/* ... */</span> &#125;, <span class="comment">//上传中的服务端响应内容，包含了上传进度等信息，高级浏览器支持</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<p>一般情况下，上传图片首先需要添加、预览(此时图片在文件服务器上)，待全部图片都选择完之后，再上传到数据库给后端使用。使用antd的Upload组件上传图片的方法流程大致如下：</p>
+<ol>
+<li>配置uploadProps，特别注意<strong>action</strong>的值，一定要确保为有效上传地址；beforeUpload可以在上传文件前对文件格式等进行检测；onChange可以在文件上传时对各个时段(done、loading、error…)做事件处理。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> uploadProps: UploadProps = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;file&#x27;</span>,</span><br><span class="line">  <span class="attr">action</span>: UploadDomain,  <span class="comment">//在企业项目中，这里一般为test环境域名+上传文件到远端服务器的接口地址</span></span><br><span class="line">  <span class="attr">listType</span>: <span class="string">&#x27;picture-card&#x27;</span>,  </span><br><span class="line">  <span class="attr">accept</span>: <span class="string">&#x27;image/*&#x27;</span>,</span><br><span class="line">  <span class="attr">beforeUpload</span>: <span class="function">(<span class="params">file: RcFile, fileList: RcFile[]</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (file.type !== <span class="string">&#x27;image/png&#x27;</span> &amp;&amp; file.type !== <span class="string">&#x27;image/jpeg&#x27;</span>) &#123;</span><br><span class="line">      message.warning(<span class="string">&#x27;图片格式不正确，请重新上传！&#x27;</span>, <span class="number">3</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">onchange</span>: <span class="function">(<span class="params">info</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (info.file.status === <span class="string">&#x27;done&#x27;</span>) &#123;</span><br><span class="line">      message.success(<span class="string">&#x27;图片上传成功&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>文件上传状态为done且返回200之后，在info.file.response.data属性中能够获取到经过处理后的图片路径名(<strong>与上传前本地文件中的图片名不同！！！</strong>)。此时根据后端接口的参数需求，去处理得到的图片路径名，一般将“文件服务器域名+图片路径名”传给后端。</li>
+</ol>
+<p>​    <strong>BeforeUpload方法的File参数：</strong></p>
+<p><img src="/image-20220419173658243.png" alt="image-20220419173658243"></p>
+<p>​    <strong>onChange方法的File参数：</strong></p>
+<p><img src="/image-20220419173952124.png" alt="image-20220419173952124"></p>
+<ol start="3">
+<li>调用POST接口将“文件服务器域名+图片路径名”参数传给后端。</li>
+</ol>
 <p>下面列出几个Upload组件中的重要API：</p>
-<p>![image-20220401162819024](/Users/aixin/Library/Application Support/typora-user-images/image-20220401162819024.png)</p>
-<p>![image-20220401162854069](/Users/aixin/Library/Application Support/typora-user-images/image-20220401162854069.png)</p>
-<p>![image-20220401162920369](/Users/aixin/Library/Application Support/typora-user-images/image-20220401162920369.png)</p>
-<p>![image-20220401163020707](/Users/aixin/Library/Application Support/typora-user-images/image-20220401163020707.png)</p>
+<p><img src="/image-20220401162819024.png" alt="image-20220401162819024"></p>
+<p><img src="/image-20220401162920369-16534842811092.png" alt="image-20220401162920369"></p>
+<p><img src="/image-20220401163020707-16534842831753.png" alt="image-20220401163020707"></p>
   
     </div>
     <div class="article-info article-info-index">
