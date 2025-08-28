@@ -6,27 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>二维码的原理 | Aixin&#39;s Blog</title>
+  <title>Aixin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二维码的原理摘自https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032、https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7064004375869390879，此处只做一些个人理解和总结。">
+  <meta name="description" content="OT协同算法杂记协同算法比较&amp;emsp;&amp;emsp;在协同编辑（比如 Google Docs、腾讯文档、石墨文档）中，多个用户同时修改同一个文档，会产生并发操作冲突。为了保证所有人最终文档一致性以及本地编辑流畅等，我们需要一些协同算法来处理这些操作冲突。OT和CRDT算法就是两种主流的解决方案。 OT算法 核心思想：把用户操作抽象为“操作（Operation）”，当并发时，通过 转化（Transf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二维码的原理">
-<meta property="og:url" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:title" content="Aixin&#39;s Blog">
+<meta property="og:url" content="http://example.com/2025/08/28/OT/index.html">
 <meta property="og:site_name" content="Aixin&#39;s Blog">
-<meta property="og:description" content="二维码的原理摘自https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032、https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7064004375869390879，此处只做一些个人理解和总结。">
+<meta property="og:description" content="OT协同算法杂记协同算法比较&amp;emsp;&amp;emsp;在协同编辑（比如 Google Docs、腾讯文档、石墨文档）中，多个用户同时修改同一个文档，会产生并发操作冲突。为了保证所有人最终文档一致性以及本地编辑流畅等，我们需要一些协同算法来处理这些操作冲突。OT和CRDT算法就是两种主流的解决方案。 OT算法 核心思想：把用户操作抽象为“操作（Operation）”，当并发时，通过 转化（Transf">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220506181255291.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/BAI%60MG2M3_C950%5DXB%5DW49DL.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220507101353090.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220507101606274.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220507104418582.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220507105056914.png">
-<meta property="og:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220507110239600.png">
-<meta property="article:published_time" content="2022-05-13T12:29:04.000Z">
-<meta property="article:modified_time" content="2022-05-23T13:02:26.000Z">
+<meta property="og:image" content="http://example.com/2025/08/28/OT/11111.png">
+<meta property="og:image" content="http://example.com/2025/08/28/OT/22222.png">
+<meta property="og:image" content="http://example.com/2025/08/28/OT/33333.png">
+<meta property="article:published_time" content="2025-08-28T14:02:44.460Z">
+<meta property="article:modified_time" content="2025-08-28T14:16:50.609Z">
 <meta property="article:author" content="Ai Xin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/image-20220506181255291.png">
+<meta name="twitter:image" content="http://example.com/2025/08/28/OT/11111.png">
   
     <link rel="alternative" href="/atom.xml" title="Aixin&#39;s Blog" type="application/atom+xml">
   
@@ -250,7 +246,7 @@
           </div>
           <div id="js-content" class="content-ll">
             <article
-  id="post-二维码的原理"
+  id="post-OT"
   class="
     article article-type-post
     
@@ -260,82 +256,78 @@
 >
   <div class="article-inner">
     
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      二维码的原理
-    </h1>
-  
-  <a href="/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2022-05-13T12:29:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
-</a> 
-    </header>
-    
     <div class="article-entry" itemprop="articleBody">
-       <h2 id="二维码的原理"><a href="#二维码的原理" class="headerlink" title="二维码的原理"></a>二维码的原理</h2><p>摘自<code>https://juejin.cn/post/6940976355097985032</code>、<code>https://juejin.cn/post/7064004375869390879</code>，此处只做一些个人理解和总结。</p>
-<span id="more"></span>
-
-<h3 id="二维码发展简史"><a href="#二维码发展简史" class="headerlink" title="二维码发展简史"></a>二维码发展简史</h3><h4 id="条形码"><a href="#条形码" class="headerlink" title="条形码"></a>条形码</h4><p>1948年，费城煤气科技学院的校长接到当地一家超市老板请求，设计一种可以扫描善品价格的装置，提高收银和销售效率。伯纳德·塞尔沃作为学院里的一名研究生，听此消息之后，准备和朋友约瑟夫·伍德兰德抓住这个机会。直到1969年，在IBM公司工作的伯纳德·塞尔沃才研究出了可识别的<strong>条形码</strong>。</p>
-<img src="image-20220506181255291.png" alt="image-20220506181255291" style="zoom:50%;" />
-
-<p>随着条形码的广泛应用，需求也不断增大，不足之处逐渐显现出来。</p>
-<ol>
-<li>只能表示数字、字母</li>
-<li>条形码又称一维码，能表示的数据量有限</li>
-</ol>
-<p>这些不足使得人们又去研究一种能表达更多信息的东西。</p>
-<h4 id="二维码"><a href="#二维码" class="headerlink" title="二维码"></a>二维码</h4><p>本来我以为二维码在中国如此大放异彩，理应是中国人发明的，但实际不然。二维码是由日本人腾弘原发明的。他想到从增加维度的角度来扩大信息存量，这是二维码的雏形。</p>
-<p>紧接着就是实现高速的读取。我们天天见到的二维码相信大家都有印象，它有三个角是固定的正方形。原理就是利用这三个角作定位，剩余一个角判断二维码的方向。这就是为什么我们用手机无论从哪个角度扫描，都可以读取二维码的内容的原因。</p>
-<p>二维码的信息存储量相比条形码提升了300倍，识别速度提升了10倍。在1994年，DENSO WAVE公司面向全日本开始推广二维码技术，并将其命名为“Quick Response Code”。时至今日，二维码已经在全世界范围内得到广泛应用，尤其是在中国可以说是发挥到了极致。</p>
-<h3 id="技术原理"><a href="#技术原理" class="headerlink" title="技术原理"></a>技术原理</h3><p>二维码中的信息包含了文本、url、图片和音视频等，是一种信息的表现方式，我们可以通过二维码这个entry访问到它对应的信息。在前端领域来说，我觉得这就像是javascript的指针一般。</p>
-<p>二维码上的黑白小方块实际对应了计算机中的0和1，可以看成是一个0-1矩阵，1代表黑色，0代表白色，二维码实际就是一个0-1组成的信息组合。</p>
-<p><img src="BAI%60MG2M3_C950%5DXB%5DW49DL.png" alt="image.png"></p>
-<h3 id="二维码扫码登录原理"><a href="#二维码扫码登录原理" class="headerlink" title="二维码扫码登录原理"></a>二维码扫码登录原理</h3><p>移动端登录和二维码扫描登录PC端的背后，实际是基于token的认证机制。这套机制将某些信息绑定在一起生成一个新的唯一标识，在客户端和服务端之间传递。这就是为什么手机端登录用户信息之后不会存储登录密码，而是在登录之后自动生成一个绑定用户Id和设备信息的token。下次进行登录直接将token发送给服务端进行登录验证，不再需要输入密码。下面是token机制的大致流程：</p>
-<ol>
-<li><p>账号密码登录时，客户端会将设备信息一起传递给服务端，</p>
+       <h1 id="OT协同算法杂记"><a href="#OT协同算法杂记" class="headerlink" title="OT协同算法杂记"></a>OT协同算法杂记</h1><h2 id="协同算法比较"><a href="#协同算法比较" class="headerlink" title="协同算法比较"></a>协同算法比较</h2><p>&emsp;&emsp;在协同编辑（比如 Google Docs、腾讯文档、石墨文档）中，多个用户同时修改同一个文档，会产生并发操作冲突。为了保证所有人最终文档一致性以及本地编辑流畅等，我们需要一些协同算法来处理这些操作冲突。OT和CRDT算法就是两种主流的解决方案。</p>
+<h3 id="OT算法"><a href="#OT算法" class="headerlink" title="OT算法"></a>OT算法</h3><ul>
+<li><p><strong>核心思想</strong>：把用户操作抽象为“操作（Operation）”，当并发时，通过 <strong>转化（Transform）</strong> 规则修改操作，使其在不同执行顺序下结果一致。</p>
 </li>
-<li><p>如果账号密码校验通过，服务端会把账号与设备进行一个绑定，存在一个数据结构中，这个数据结构中包含了账号ID，设备ID，设备类型等等</p>
+<li><p><strong>例子</strong>：Alice 在第 3 个字符插入 A，Bob 在第 1 个字符删除 B。如果先执行 Bob 的操作，那么 Alice 的插入位置应该从 3 → 2，需要做 transform。</p>
 </li>
-<li><p>服务端生成根据数据结构生成token，客户端收到token后做一个本地保存，每次重新访问服务端都需要携带token和设备信息</p>
+</ul>
+<h3 id="CRDT算法"><a href="#CRDT算法" class="headerlink" title="CRDT算法"></a>CRDT算法</h3><ul>
+<li><p><strong>核心思想</strong>：设计特殊的数据结构（偏序、幺半群、G-counter、LWW register 等），保证多个副本的操作天然可合并，不需要 transform。</p>
 </li>
-<li><p>服务端将客户端传过来的token和设备信息进行比较，若相同，则校验通过；不同则拒绝直接访问。</p>
+<li><p><strong>例子</strong>：每个字符都有一个唯一 ID。插入时给字符分配 ID；删除时标记删除；合并时根据 ID 排序。即使并发插入，也能通过 ID 排序得到相同结果。</p>
 </li>
-</ol>
-<p>可见在移动端的账号密码登录过程中，客户端并没有保存你的密码，而是将一些关联信息包装成一个token，这个token就是它保存的信息了。可以说，客户端登录的目的，就是获取一个唯一token；那么通过二维码扫描登录PC端是怎么生成token的呢？</p>
-<p>首先我们先来回顾一下二维码扫码登录的大致流程：</p>
-<img src="image-20220507101353090.png" alt="image-20220507101353090" style="zoom:50%;" />
-
-<p>在这个流程中，二维码其实是存在三种状态的，分别是<strong>待扫描</strong>、<strong>已扫描待确认</strong>和<strong>已确认</strong>。知道了这三种状态之后我们再来看一下每个状态下二维码中存储的信息都有哪些。</p>
-<img src="image-20220507101606274.png" alt="image-20220507101606274" style="zoom: 67%;" />
-
-<p>可以看见，在第一个状态向第二个状态转变时，二维码中多了一份账号ID的信息，在第二个状态向第三个状态转变时，二维码中又多了一份PC端tokenhvh的确认信息。整个流程细分下来，又可以分为二维码准备、扫描二维码、登录确认三个具体过程。</p>
-<h4 id="二维码准备"><a href="#二维码准备" class="headerlink" title="二维码准备"></a>二维码准备</h4><img src="image-20220507104418582.png" alt="image-20220507104418582" style="zoom:67%;" />
-
-<p>在理解这部分内容的时候，可以打开PC端微信，通过二维码扫码登录来实时理解这部分的过程。</p>
-<ol>
-<li>首先打开PC端登录界面，向服务端发送生成二维码请求，并携带设备信息</li>
-<li>服务端接收请求，生成二维码ID，将其与设备信息绑定在一起，将二维码ID返回给PC端</li>
-<li>PC端接收到二维码ID之后，根据此ID生成二维码，里面存储了二维码ID和设备信息</li>
-<li>向服务端轮询二维码的状态，以便在用户扫描和确认之后更新二维码状态</li>
-</ol>
-<h4 id="扫描二维码"><a href="#扫描二维码" class="headerlink" title="扫描二维码"></a>扫描二维码</h4><img src="image-20220507105056914.png" alt="image-20220507105056914" style="zoom:67%;" />
-
-<ol>
-<li>手机端扫描PC端生成的二维码，获取二维码ID</li>
-<li>手机端将<strong>已经登录的账号信息</strong>和二维码ID一起发送给服务端</li>
-<li>服务端接收到信息后，将账号信息和二维码ID、设备信息绑定在一起，生成<strong>临时token</strong>。并将临时token返回给手机端</li>
-<li>PC端轮询二维码状态时，发现状态已变成已扫描待确认，更改二维码状态</li>
-</ol>
-<p>在这部分流程中有两个需要注意的点，能够扫描二维码的一定是已经登录的账号；临时token和token并无本质区别，只是在执行某些操作之后就会失效。比如我们在微信登录扫码之后，在手机端的确认登录页面不仅有“确认登录”按钮，还有“取消登录”按钮，临时token就是对这种临时变卦的情况的考虑。</p>
-<h4 id="登录确认"><a href="#登录确认" class="headerlink" title="登录确认"></a>登录确认</h4><img src="image-20220507110239600.png" alt="image-20220507110239600" style="zoom:67%;" />
-
-<ol>
-<li>手机端确认登录之后，携带临时token到服务端</li>
-<li>服务端改变二维码状态，在token中新增PC端tokenhvh确认信息，生成新的token返回给PC端</li>
-<li>PC端轮询二维码状态时，发现状态已变成已确认，更改二维码状态，PC端登录完成</li>
-<li>登录完成之后，PC端通过携带token访问服务端资源</li>
-</ol>
+</ul>
+<h3 id="OT-CRDT算法比较"><a href="#OT-CRDT算法比较" class="headerlink" title="OT / CRDT算法比较"></a>OT / CRDT算法比较</h3><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>OT</th>
+<th align="center">CRDT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>一致性保证</strong></td>
+<td>通过 transform 函数保证</td>
+<td align="center">通过数学结构（可交换合并）保证</td>
+</tr>
+<tr>
+<td><strong>依赖中心</strong></td>
+<td>强依赖服务器转发、控制版本</td>
+<td align="center">可中心化也可去中心化，P2P 友好</td>
+</tr>
+<tr>
+<td><strong>性能</strong></td>
+<td>网络带宽小，操作轻量</td>
+<td align="center">元数据可能膨胀，需要 GC</td>
+</tr>
+<tr>
+<td><strong>应用场景</strong></td>
+<td>纯文本协作（类似 Google Docs）</td>
+<td align="center">去中心化、离线优先，或者编辑复杂数据结构（JSON、矢量图形）</td>
+</tr>
+<tr>
+<td><strong>核心</strong></td>
+<td>“操作”的原子性</td>
+<td align="center">“数据”的原子性</td>
+</tr>
+</tbody></table>
+<h2 id="OT协同算法原理分析"><a href="#OT协同算法原理分析" class="headerlink" title="OT协同算法原理分析"></a>OT协同算法原理分析</h2><h3 id="双用户单操作"><a href="#双用户单操作" class="headerlink" title="双用户单操作"></a>双用户单操作</h3><p>&emsp;&emsp;我们以一个在富文档协同编辑过程中常见的情况为例，来说明OT协同所要解决的问题。</p>
+<p>&emsp;&emsp;前面我们提到了，OT协同算法的核心是“操作”的原子性，也就是说在一个富文档中，插入一个文本框、修改文字颜色、在文本框某处插入若干文字、设置文本主题等都被OT视为一个最基本的不可拆分的原子操作。假设有两个用户A、B，他们同时编辑一个写有“123”的文本框。此时用户A在“1”后面插入一个“4”，用户B在“2”后面插入一个“5”。我们把用户A的操作记为：Operation A = insert(1, “4”), Operation B = insert(2, “5”)</p>
+<ul>
+<li><p>用户A进行了一个insert(1, “4”)操作，A本地需要首先应用这个操作，由此A本地的文本是1423。</p>
+</li>
+<li><p>用户B同时也进行了一个insert(2, “5”)操作，B本地需要首先应用这个操作，由此B本地的文本是1253。</p>
+</li>
+<li><p>此时需要同步O(A)和O(B)，用户A收到了用户B的insert(2, “5”)操作，A从本地的1423应用之后，得到了14523。</p>
+</li>
+<li><p>用户B收到了用户A的insert(1, “4”)操作，B从本地的1253应用之后，得到了14253。</p>
+</li>
+</ul>
+<p>&emsp;&emsp;问题显而易见了，两个用户对同一个文本框执行完一个原子操作后，得到的结果居然是不一致的！最后的结果并没有保证数据的最终一致性。此时我们就可以通过OT算法进行处理。OT算法全名为Operation Transformation，顾名思义，就是通过一个转换函数（Transform）来去协调操作的一致性。</p>
+<p>&emsp;&emsp;回到第三步之前，当用户A、B在本地完成操作之后，就需要通过OT去做转换操作。这里我们记O(A)`为用户A同步用户B的操作过程，O(B)`为用户A同步用户B的操作过程。则有：</p>
+<pre><code>O(A)&#39; = OT(O(A), O(B))
+O(B)&#39; = OT(O(B), O(A))
+</code></pre>
+<p>&emsp;&emsp;那我们现在的一个操作过程就可以用一个菱形图来表示：<br><img src="11111.png"></p>
+<p>&emsp;&emsp;注意最后的结果为“?”的原因是，“14523”和“14253”都可能出现。这取决于用户A和用户B在中台服务器中进行数据落盘的速度。当用户B先进行数据落盘，那么就会得到“14253”的结果；如果用户A先进行数据落盘，那么就会得到“14523”的结果。我们只需要保证最后不同用户在页面中所呈现的最终结果一致就行了。</p>
+<h3 id="多用户单操作"><a href="#多用户单操作" class="headerlink" title="多用户单操作"></a>多用户单操作</h3><p>&emsp;&emsp;我们再考虑多个用户进行操作的案例，假设有四个用户A、B、C、D，他们同时编辑一个写有“1234”的文本框。此时用户A在“1”后面插入一个“5”，用户B在“2”后面插入一个“6”，用户C在“3”后面插入一个“7”，用户D在“4”后面插入一个“8”。那么我们根据上面所述的思想通过OT算法进行协同转换之后，就可以得到一个“殊途同归”的菱形图。其中T表示用OT协同算法进行转换的过程。如下图所示：<br><img src="22222.png"></p>
+<p>&emsp;&emsp;这里的“？”和上面同理，始终记住我们只需要保证结果数据的最终一致性就行了。</p>
+<h3 id="双用户双操作"><a href="#双用户双操作" class="headerlink" title="双用户双操作"></a>双用户双操作</h3><p>&emsp;&emsp;根据上面所得到的概念，我们很容易就可以画出双用户双操作的一个转换过程图，它当然还是一个菱形图：<br><img src="33333.png"></p>
+<h3 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h3><p>&emsp;&emsp;实际的转换过程较为复杂，可能存在一些较为特殊的情况。比如说对于文本框“123”，用户A和用户B都在索引为0的位置插入一个数字。那么此时他们的冲突处理就更为复杂了，我们需要保证一边保持原索引序号，另一边增加索引序号来进行转换处理，在实际实现过程中需要引入一个偏置参数来解决这个问题。比如说有些处理手段为：设置布尔型的参数作为偏置参数，并指定中心服务器的起始偏置参数为 True，客户端的偏置参数为 False。</p>
+<h3 id="OT算法的挑战"><a href="#OT算法的挑战" class="headerlink" title="OT算法的挑战"></a>OT算法的挑战</h3><p>&emsp;&emsp;对于富文档操作的应用来说，在实际开发过程中需要考虑的原子操作多达几十种甚至上百种，它们两两之间去进行冲突处理，就可以有成千上万种冲突情况。如果一个冲突指令较为复杂，往往下面还有十几二十种不同的情况。人为的做冲突情况考虑很容易出现遗漏特殊情况的场景，可见边界条件是实际场景需要考虑的一大难题。在实际工作过程中，去通过算法结构构造出适配的自动化测试方案，是解决该问题的一个重要思路之一。</p>
   
     </div>
     <div class="article-info article-info-index">
@@ -385,7 +377,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/13/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/08/28/OT/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -398,18 +390,9 @@
  
 <nav id="article-nav">
   
-    <a href="/2022/05/22/%E5%88%9D%E8%AF%86threejs/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          初识threejs
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/04/12/%E5%BE%AE%E5%89%8D%E7%AB%AF/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微前端</div>
+    <a href="/2022/05/22/%E5%8F%AF%E9%A2%84%E6%B5%8B%E5%8C%96%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">可预测化状态管理</div>
       <i class="icon-circle-right"></i>
     </a>
   
